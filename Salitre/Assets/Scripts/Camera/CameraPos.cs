@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class CameraPos : MonoBehaviour
 {
-    [SerializeField] Transform _camera;
-    [SerializeField] float lerpSpeed;
+    [SerializeField] Transform _cameraTrack;
+    [SerializeField] Transform playerOrientation;
+
+    [SerializeField] float rotationSpeed;
     private void Update()
     {
-        if (_camera.position != transform.position)
-        {
-            _camera.position = Vector3.Lerp(_camera.position, transform.position, lerpSpeed);
-        }
+        _cameraTrack.position = transform.position;
+
+        Vector3 cameraPosition = Camera.main.transform.position;
+        Vector3 lookDirection = cameraPosition - playerOrientation.position;
+        lookDirection.y = 0;
+        Quaternion targetRotation = Quaternion.LookRotation(lookDirection * -1);
+
+        playerOrientation.rotation = Quaternion.Slerp(playerOrientation.rotation, targetRotation, Time.deltaTime * rotationSpeed);
     }
 }
