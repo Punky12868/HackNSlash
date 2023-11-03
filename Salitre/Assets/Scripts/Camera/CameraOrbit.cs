@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using Rewired;
 
 public class CameraOrbit : MonoBehaviour
 {
+    private int playerID = 0;
+    [SerializeField] Rewired.Player player;
+
     [SerializeField] CinemachineVirtualCamera _vCamera;
     [SerializeField] CinemachineDollyCart _dollyCart;
 
     float mouseX;
     float scrollY;
+    Vector3 normalizedValues;
 
     [Range(1, 1000)]
     [SerializeField] float sens;
@@ -30,20 +35,63 @@ public class CameraOrbit : MonoBehaviour
 
     [Range(1, 500)]
     [SerializeField] float fovSens;
+
+    [SerializeField] float lerpLockDuration;
+    float timeElapsed;
+    bool lockCameraPos;
     private void Awake()
     {
+        player = ReInput.players.GetPlayer(playerID);
+
         Cursor.lockState = CursorLockMode.Confined;
         _vCamera.m_Lens.FieldOfView = fov;
     }
     private void Update()
     {
-        mouseX = Input.GetAxis("Mouse X") * sens;
-        scrollY = Input.GetAxisRaw("Mouse ScrollWheel");
+        mouseX = player.GetAxisRaw("Camera Orbit");
+        scrollY = player.GetAxisRaw("Camera Zoom");
+        normalizedValues = new Vector3(mouseX, scrollY, 0).normalized;
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (player.GetButtonDown("Lock"))
+        {
+            if (!lockCameraPos)
+            {
+                lockCameraPos = true;
+            }
+        }
+        if (lockCameraPos)
+        {
+            if (_dollyCart.m_Position != 0)
+            {
+                if (_dollyCart.m_Position > -1.5 && _dollyCart.m_Position < 1.5)
+                {
+                    _dollyCart.m_Position = 0;
+                    _dollyCart.m_Speed = 0;
+                }
+                else
+                {
+                    if (_dollyCart.m_Position > 50)
+                    {
+                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, sens, lerpLockDuration / timeElapsed);
+                        timeElapsed += Time.unscaledDeltaTime;
+                    }
+                    else
+                    {
+                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, -sens, lerpLockDuration / timeElapsed);
+                        timeElapsed += Time.unscaledDeltaTime;
+                    }
+                }
+            }
+            else
+            {
+                lockCameraPos = false;
+            }
+        }
+
+        if (player.GetButton("Activate Orbit"))
         {
             Cursor.lockState = CursorLockMode.Locked;
-            _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, mouseX, 1 - Mathf.Exp(-sharpness * Time.unscaledDeltaTime));
+            _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, normalizedValues.x * sens, 1 - Mathf.Exp(-sharpness * Time.unscaledDeltaTime));
 
             //_dollyCart.m_Speed = Mathf.Clamp(Mathf.Lerp(_dollyCart.m_Speed, x, 1 - Mathf.Exp(-sharpness * Time.unscaledDeltaTime)), 0, _dollyCart.m_Path.PathLength);
             //_dollyCart.m_Position = Mathf.Clamp(Mathf.Lerp(_dollyCart.m_Position, x, 1-Mathf.Exp(-sharpness * Time.unscaledDeltaTime)), 0, _dollyCart.m_Path.PathLength);
@@ -58,7 +106,7 @@ public class CameraOrbit : MonoBehaviour
         {
             if (fov >= minFov && fov <= maxFov)
             {
-                fov += (scrollY * fovSens) * -1;
+                fov += (normalizedValues.y * fovSens) * -1;
             }
         }
 

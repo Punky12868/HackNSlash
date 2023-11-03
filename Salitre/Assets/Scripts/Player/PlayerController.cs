@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class PlayerController : MonoBehaviour
 {
+    private int playerID = 0;
+    [SerializeField] Rewired.Player player;
+
     GameObject playerRenderer;
     Animator playerAnim;
     [SerializeField] float heightOffset;
@@ -20,6 +24,8 @@ public class PlayerController : MonoBehaviour
     float maxVelocity;
     private void Awake()
     {
+        player = ReInput.players.GetPlayer(playerID);
+
         health = _data.health;
         speed = _data.speed;
         maxVelocity = speed;
@@ -28,25 +34,28 @@ public class PlayerController : MonoBehaviour
         //playerAnim = GetComponentInChildren<Animator>();
 
         playerRenderer.name = gameObject.name + " Renderer";
-        playerRenderer.transform.SetParent(GameObject.FindGameObjectWithTag("Renderers").transform);
+        //playerRenderer.transform.SetParent(GameObject.FindGameObjectWithTag("Renderers").transform);
         
         rb = GetComponent<Rigidbody>();
     }
     private void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
+        h = player.GetAxisRaw("Move Horizontal");
+        v = player.GetAxisRaw("Move Vertical");
 
         playerRenderer.transform.position = new Vector3(transform.position.x, transform.position.y - heightOffset, transform.position.z);
     }
     private void FixedUpdate()
     {
-        moveDir = orientation.forward * v + orientation.right * h;
-        rb.AddForce(moveDir.normalized * speed * 10, ForceMode.Force);
-
-        if (rb.velocity.magnitude > maxVelocity)
+        if (WeaponCombo.canAim)
         {
-            rb.velocity = rb.velocity.normalized * maxVelocity;
+            moveDir = orientation.forward * v + orientation.right * h;
+            rb.AddForce(moveDir.normalized * speed * 10, ForceMode.Force);
+
+            if (rb.velocity.magnitude > maxVelocity)
+            {
+                rb.velocity = rb.velocity.normalized * maxVelocity;
+            }
         }
     }
 }
