@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform orientation;
     [SerializeField] Player _data;
 
-    Rigidbody rb;
     Vector3 moveDir;
+    Rigidbody rb;
     float h, v;
 
     [HideInInspector] public float health;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (WeaponCombo.canAim)
+        if (WeaponCombo.canMove)
         {
             moveDir = orientation.forward * v + orientation.right * h;
             rb.AddForce(moveDir.normalized * speed * 10, ForceMode.Force);
@@ -57,5 +57,10 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * maxVelocity;
             }
         }
+    }
+    public void MoveOnAttack(Transform hitDir, float force)
+    {
+        moveDir = hitDir.forward;
+        rb.AddForce(moveDir.normalized * force, ForceMode.Impulse);
     }
 }

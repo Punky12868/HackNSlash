@@ -15,16 +15,20 @@ public class WeaponCombo : MonoBehaviour
     public float attackRate = 2f;
 
     public bool canAttack;
+    public static bool canMove;
     public static bool canAim;
 
     public Animator anim;
     public int combo;
+    public float forceMagnitude;
+    [SerializeField] Transform orientation;
 
     private void Start()
     {
         player = ReInput.players.GetPlayer(playerID);
 
         canAttack = true;
+        canMove = true;
         canAim = true;
         anim = GetComponent<Animator>();
     }
@@ -34,15 +38,18 @@ public class WeaponCombo : MonoBehaviour
         {
             if (player.GetButtonDown("Attack"))
             {
+                canMove = false;
                 canAim = false;
                 canAttack = false;
                 anim.SetTrigger("" + combo);
-                Attack();
+                //GetComponent<SpawnHitbox>().Spawn(combo);
             }
         }
     }
     public void StartCombo(int i)
     {
+        FindObjectOfType<SpawnHitbox>().Destroy();
+
         attackDamage += i;
         if (combo < 3)
         {
@@ -55,16 +62,13 @@ public class WeaponCombo : MonoBehaviour
         combo = 0;
         attackDamage = storedAttackDamage;
         canAttack = true;
+        canMove = true;
         canAim = true;
     }
-    private void Attack()
+    public void MoveForward()
     {
-        Debug.Log("Attack with combo N°" + combo);
-        /*Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(fist.position, attackRange, EnemyLayer);
-
-        foreach (Collider2D enemy in hitEnemies)
-        {
-
-        }*/
+        FindObjectOfType<PlayerController>().MoveOnAttack(orientation, forceMagnitude);
+        /*Rigidbody playerRb = FindObjectOfType<PlayerController>().gameObject.GetComponent<Rigidbody>();
+        playerRb.AddForce(orientation.forward * forceMagnitude, ForceMode.Impulse);*/
     }
 }

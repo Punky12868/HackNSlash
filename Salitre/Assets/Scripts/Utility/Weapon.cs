@@ -9,5 +9,4 @@ public class Weapon : ScriptableObject
     public Animator animator;
 
     public int damage;
-    public float fireRate;
 }

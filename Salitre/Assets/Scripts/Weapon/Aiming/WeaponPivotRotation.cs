@@ -7,7 +7,7 @@ public class WeaponPivotRotation : MonoBehaviour
     [SerializeField] float rotationSpeed;
     private void Update()
     {
-        if (WeaponCombo.canAim)
+        if (WeaponCombo.canMove)
         {
             Vector3 cameraPosition = Camera.main.transform.position;
             Vector3 lookDirection = cameraPosition - transform.position;
