@@ -19,7 +19,7 @@ public class PlayerHitbox : MonoBehaviour
         {
             Debug.Log("Hit: " + enemy.gameObject.name);
             enemy.GetComponent<TakeDamage>().GetDamage(FindObjectOfType<WeaponController>().damage);
-            enemy.GetComponent<TakeDamage>().GetKnockback(FindObjectOfType<PlayerController>().gameObject.transform);
+            enemy.GetComponent<TakeDamage>().GetKnockback(FindObjectOfType<WeaponCombo>().orientation);
         }
     }
     private void OnDrawGizmos()

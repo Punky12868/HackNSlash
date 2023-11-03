@@ -21,7 +21,7 @@ public class WeaponCombo : MonoBehaviour
     public Animator anim;
     public int combo;
     public float forceMagnitude;
-    [SerializeField] Transform orientation;
+    public Transform orientation;
 
     private void Start()
     {

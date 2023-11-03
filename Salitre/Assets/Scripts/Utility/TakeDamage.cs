@@ -41,8 +41,8 @@ public class TakeDamage : MonoBehaviour
     }
     public void GetKnockback(Transform weapon)
     {
-        Vector3 dir = (weapon.position - transform.position).normalized;
-        GetComponent<Rigidbody>().AddForce(dir * -knockbackForce, ForceMode.Impulse);
+        Vector3 dir = (weapon.forward).normalized;
+        GetComponent<Rigidbody>().AddForce(dir * knockbackForce, ForceMode.Impulse);
     }
     void CheckHealth()
     {
