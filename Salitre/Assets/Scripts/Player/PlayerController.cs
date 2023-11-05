@@ -6,7 +6,7 @@ using Rewired;
 public class PlayerController : MonoBehaviour
 {
     private int playerID = 0;
-    [SerializeField] Rewired.Player player;
+    public Rewired.Player player;
 
     GameObject playerRenderer;
     Animator playerAnim;

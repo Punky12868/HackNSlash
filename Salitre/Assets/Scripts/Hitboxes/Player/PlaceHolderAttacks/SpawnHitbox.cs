@@ -9,6 +9,12 @@ public class SpawnHitbox : MonoBehaviour
     [SerializeField] GameObject[] hitboxType;
     public void Spawn(int i)
     {
+        int motorIndex = 0; // the first motor
+        float motorLevel = 1.0f; // full motor speed
+        float duration = 0.3f; // .3 seconds
+
+        FindObjectOfType<PlayerController>().player.SetVibration(motorIndex, motorLevel, duration);
+
         Instantiate(hitboxType[i], orientation);
     }
     public void Destroy()
