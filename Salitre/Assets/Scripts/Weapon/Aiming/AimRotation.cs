@@ -15,7 +15,7 @@ public class AimRotation : MonoBehaviour
     private bool isControllerActive = false;
     private void Awake()
     {
-        player = StaticInput.playerInput;
+        player = ReInput.players.GetPlayer(0);
     }
     private void Update()
     {

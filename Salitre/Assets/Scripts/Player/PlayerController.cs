@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     float maxVelocity;
     private void Awake()
     {
-        player = StaticInput.playerInput;
+        player = ReInput.players.GetPlayer(0);
 
         health = _data.health;
         speed = _data.speed;

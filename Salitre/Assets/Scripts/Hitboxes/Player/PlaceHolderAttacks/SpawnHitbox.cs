@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnHitbox : MonoBehaviour
 {
     [HideInInspector] public GameObject currentHitbox;
-    public Transform orientation;
+    public Transform hitboxSpawnPoint;
     [SerializeField] GameObject[] hitboxType;
     public void Spawn(int i)
     {
@@ -15,7 +15,7 @@ public class SpawnHitbox : MonoBehaviour
 
         FindObjectOfType<PlayerController>().player.SetVibration(motorIndex, motorLevel, duration);
 
-        Instantiate(hitboxType[i], orientation);
+        Instantiate(hitboxType[i], hitboxSpawnPoint);
     }
     public void Destroy()
     {

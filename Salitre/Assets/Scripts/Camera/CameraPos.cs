@@ -7,10 +7,11 @@ public class CameraPos : MonoBehaviour
     [SerializeField] Transform _cameraTrack;
     [SerializeField] Transform playerOrientation;
 
+    [SerializeField] float lerpSpeed;
     [SerializeField] float rotationSpeed;
     private void Update()
     {
-        _cameraTrack.position = transform.position;
+        _cameraTrack.position = Vector3.Lerp(_cameraTrack.position, transform.position, 1 - Mathf.Exp(-lerpSpeed * Time.unscaledDeltaTime)); ;
 
         Vector3 cameraPosition = Camera.main.transform.position;
         Vector3 lookDirection = cameraPosition - playerOrientation.position;
