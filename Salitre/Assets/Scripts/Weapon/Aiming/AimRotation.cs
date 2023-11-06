@@ -5,17 +5,17 @@ using Rewired;
 
 public class AimRotation : MonoBehaviour
 {
+    Player player;
+
     [SerializeField] Transform orientation;
 
     [SerializeField] float rotationSpeed;
 
-    private int playerID = 0;
-    Rewired.Player player;
     private bool isMouseInput = true;
     private bool isControllerActive = false;
     private void Awake()
     {
-        player = ReInput.players.GetPlayer(playerID);
+        player = StaticInput.playerInput;
     }
     private void Update()
     {

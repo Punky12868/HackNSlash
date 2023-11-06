@@ -5,8 +5,7 @@ using Rewired;
 
 public class WeaponCombo : MonoBehaviour
 {
-    private int playerID = 0;
-    [SerializeField] Rewired.Player player;
+    Player player;
 
     public float attackRange = 0.5f;
     public int attackDamage;
@@ -25,7 +24,7 @@ public class WeaponCombo : MonoBehaviour
 
     private void Start()
     {
-        player = ReInput.players.GetPlayer(playerID);
+        player = StaticInput.playerInput;
 
         canAttack = true;
         canMove = true;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "UrpiHat/Player")]
-public class Player : ScriptableObject
+public class PlayerData : ScriptableObject
 {
     public Mesh skin;
     public Animator animator;

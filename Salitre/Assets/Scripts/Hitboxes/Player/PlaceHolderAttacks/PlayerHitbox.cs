@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerHitbox : MonoBehaviour
 {
     public LayerMask Hittable;
-    BoxCollider boxCollider;
-
-    bool hit;
+    [SerializeField] BoxCollider boxCollider;
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider>();
@@ -26,6 +24,6 @@ public class PlayerHitbox : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.matrix = transform.localToWorldMatrix;
-        Gizmos.DrawWireCube(Vector3.zero, boxCollider.size);
+        Gizmos.DrawWireCube(boxCollider.center, boxCollider.size);
     }
 }

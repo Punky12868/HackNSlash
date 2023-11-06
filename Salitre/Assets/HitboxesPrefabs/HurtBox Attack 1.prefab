@@ -61,3 +61,4 @@ MonoBehaviour:
   Hittable:
     serializedVersion: 2
     m_Bits: 72
+  boxCollider: {fileID: 7300739591796541209}

@@ -6,8 +6,7 @@ using Rewired;
 
 public class CameraOrbit : MonoBehaviour
 {
-    private int playerID = 0;
-    [SerializeField] Rewired.Player player;
+    Player player;
 
     [SerializeField] CinemachineVirtualCamera _vCamera;
     [SerializeField] CinemachineDollyCart _dollyCart;
@@ -41,7 +40,7 @@ public class CameraOrbit : MonoBehaviour
     bool lockCameraPos;
     private void Awake()
     {
-        player = ReInput.players.GetPlayer(playerID);
+        player = StaticInput.playerInput;
 
         Cursor.lockState = CursorLockMode.Confined;
         _vCamera.m_Lens.FieldOfView = fov;

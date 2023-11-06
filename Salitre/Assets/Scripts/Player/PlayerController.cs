@@ -5,15 +5,14 @@ using Rewired;
 
 public class PlayerController : MonoBehaviour
 {
-    private int playerID = 0;
-    public Rewired.Player player;
+    public Player player;
 
     GameObject playerRenderer;
     Animator playerAnim;
     [SerializeField] float heightOffset;
 
     [SerializeField] Transform orientation;
-    [SerializeField] Player _data;
+    [SerializeField] PlayerData _data;
 
     Vector3 moveDir;
     Rigidbody rb;
@@ -24,7 +23,7 @@ public class PlayerController : MonoBehaviour
     float maxVelocity;
     private void Awake()
     {
-        player = ReInput.players.GetPlayer(playerID);
+        player = StaticInput.playerInput;
 
         health = _data.health;
         speed = _data.speed;
