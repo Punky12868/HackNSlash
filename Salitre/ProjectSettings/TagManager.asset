@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Renderers
+  - Agent
+  - Projectile
+  - TargetPlate
+  - Target
+  - Floor
+  - RandomDir
   layers:
   - Default
   - TransparentFX

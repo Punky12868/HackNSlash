@@ -13,7 +13,7 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] Transform orientation;
 
-    Vector3 moveDir;
+    [HideInInspector] public Vector3 moveDir;
     Rigidbody rb;
     float h, v;
 
