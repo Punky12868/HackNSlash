@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] Enemy enemyData;
-
-    [HideInInspector] public float health;
     [HideInInspector] public float speed;
-    private void Awake()
-    {
-        health = enemyData.health;
-        speed = enemyData.speed;
-    }
 }

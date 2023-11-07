@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 
-public class PlayerController : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
     public Player player;
 
@@ -12,29 +12,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float heightOffset;
 
     [SerializeField] Transform orientation;
-    [SerializeField] PlayerData _data;
 
     Vector3 moveDir;
     Rigidbody rb;
     float h, v;
 
-    [HideInInspector] public float health;
     [HideInInspector] public float speed;
     float maxVelocity;
     private void Awake()
     {
         player = ReInput.players.GetPlayer(0);
-
-        health = _data.health;
-        speed = _data.speed;
         maxVelocity = speed;
-
         playerRenderer = GetComponentInChildren<LookAtCamera>().gameObject;
         //playerAnim = GetComponentInChildren<Animator>();
 
         playerRenderer.name = gameObject.name + " Renderer";
-        //playerRenderer.transform.SetParent(GameObject.FindGameObjectWithTag("Renderers").transform);
-        
         rb = GetComponent<Rigidbody>();
     }
     private void Update()
@@ -56,10 +48,5 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * maxVelocity;
             }
         }
-    }
-    public void MoveOnAttack(Transform hitDir, float force)
-    {
-        moveDir = hitDir.forward;
-        rb.AddForce(moveDir.normalized * force, ForceMode.Impulse);
     }
 }

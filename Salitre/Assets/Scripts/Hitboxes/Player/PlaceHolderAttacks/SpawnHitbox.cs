@@ -13,7 +13,7 @@ public class SpawnHitbox : MonoBehaviour
         float motorLevel = 1.0f; // full motor speed
         float duration = 0.3f; // .3 seconds
 
-        FindObjectOfType<PlayerController>().player.SetVibration(motorIndex, motorLevel, duration);
+        FindObjectOfType<PlayerInput>().player.SetVibration(motorIndex, motorLevel, duration);
 
         Instantiate(hitboxType[i], hitboxSpawnPoint);
     }

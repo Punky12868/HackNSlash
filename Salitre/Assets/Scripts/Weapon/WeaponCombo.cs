@@ -5,24 +5,23 @@ using Rewired;
 
 public class WeaponCombo : MonoBehaviour
 {
+    [SerializeField] Weapon weapon;
     Player player;
 
-    public float attackRange = 0.5f;
-    public int attackDamage;
-    public int storedAttackDamage;
-
-    public float attackRate = 2f;
-
-    public bool canAttack;
+    [HideInInspector] public bool canAttack;
     public static bool canMove;
     public static bool canAim;
+    bool chargeAttack;
+
+    [Header("Combo State")]
 
     public Animator anim;
-    public int combo;
-    public float forceMagnitude;
-    public Transform knockbackOrientation;
 
-    bool chargeAttack;
+    public int combo;
+
+    public Transform knockbackOrientation;
+    public float moveForwardForce;
+
     private void Start()
     {
         player = ReInput.players.GetPlayer(0);
@@ -62,11 +61,13 @@ public class WeaponCombo : MonoBehaviour
             }
         }
     }
+
+    #region ComboLogic
     public void StartCombo(int i)
     {
         FindObjectOfType<SpawnHitbox>().Destroy();
 
-        attackDamage += i;
+        //attackDamage += i;
         if (combo < 3)
         {
             combo++;
@@ -76,16 +77,16 @@ public class WeaponCombo : MonoBehaviour
     public void FinishCombo()
     {
         combo = 0;
-        attackDamage = storedAttackDamage;
+        //attackDamage = storedAttackDamage;
         canAttack = true;
         canMove = true;
         canAim = true;
         chargeAttack = true;
     }
+    #endregion
+
     public void MoveForward()
     {
-        FindObjectOfType<PlayerController>().MoveOnAttack(knockbackOrientation, forceMagnitude);
-        /*Rigidbody playerRb = FindObjectOfType<PlayerController>().gameObject.GetComponent<Rigidbody>();
-        playerRb.AddForce(orientation.forward * forceMagnitude, ForceMode.Impulse);*/
+        GetComponentInParent<Knockback>().MoveOnAttack(knockbackOrientation, moveForwardForce);
     }
 }

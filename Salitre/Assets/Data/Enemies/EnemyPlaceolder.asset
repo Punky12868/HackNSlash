@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9ec10bdf1f891540bb2e2b27baacdb0, type: 3}
-  m_Name: EnemyPlaceHolder
+  m_Script: {fileID: 11500000, guid: e3b2c668a3a79a042a11e6ff5e8f3f32, type: 3}
+  m_Name: EnemyPlaceolder
   m_EditorClassIdentifier: 
+  skin: {fileID: 0}
+  animator: {fileID: 0}
   drop: {fileID: 0}
-  health: 0
-  speed: 0
+  health: 5
+  speed: 5

@@ -7,6 +7,7 @@ public class AimRotation : MonoBehaviour
 {
     Player player;
 
+    public Transform aimOrientation;
     [SerializeField] Transform orientation;
 
     [SerializeField] float rotationSpeed;

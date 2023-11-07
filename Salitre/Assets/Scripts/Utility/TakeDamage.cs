@@ -4,68 +4,32 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-    public enum EntityType {Hittable, Enemy, Player}
-    public EntityType type;
-
     [SerializeField] float knockbackForce;
-    public void GetDamage(int i)
+    [SerializeField] float freezeTime;
+    public void GetDamage(int damage, Transform weaponDir)
     {
-        switch (type)
+        if (GetComponent<Health>().health > 0)
         {
-            case EntityType.Hittable:
-                break;
-
-            case EntityType.Enemy:
-
-                if (GetComponent<EnemyController>().health > 0)
-                {
-                    GetComponent<EnemyController>().health -= i;
-                    CheckHealth();
-                }
-                
-                break;
-
-            case EntityType.Player:
-
-                if (GetComponent<PlayerController>().health > 0)
-                {
-                    GetComponent<PlayerController>().health -= i;
-                    CheckHealth();
-                }
-
-                break;
-
-            default:
-                break;
+            GetComponent<Health>().health -= damage;
+            GetFeedback(weaponDir);
+            Death();
         }
     }
-    public void GetKnockback(Transform weapon)
+    void Death()
     {
-        Vector3 dir = (weapon.forward).normalized;
-        GetComponent<Rigidbody>().AddForce(dir * knockbackForce, ForceMode.Impulse);
-    }
-    void CheckHealth()
-    {
-        switch (type)
+        if (GetComponent<Health>().health <= 0)
         {
-            case EntityType.Hittable:
-                break;
-            case EntityType.Enemy:
-                if (GetComponent<EnemyController>().health <= 0)
-                {
-                    Destroy(GetComponent<EnemyController>().gameObject);
-                    
-                }
-                break;
-            case EntityType.Player:
-                if (GetComponent<PlayerController>().health <= 0)
-                {
-                    Destroy(GetComponent<PlayerController>().gameObject);
-
-                }
-                break;
-            default:
-                break;
+            Destroy(GetComponent<Health>().gameObject);
         }
+    }
+    void GetFeedback(Transform hitDirection)
+    {
+        GetComponent<Knockback>().GetKnockback(hitDirection, knockbackForce);
+        GetFreezeTime(freezeTime);
+    }
+    void GetFreezeTime(float i)
+    {
+        Freeze freezeFeedback = GetComponent<Freeze>();
+        freezeFeedback.StartCoroutine(freezeFeedback.StartFreeze(i));
     }
 }
