@@ -17,7 +17,7 @@ namespace Friedforfun.ContextSteering.Demo
 
         [Tooltip("Movement speed of the agent.")]
         [Range(0.1f, 20f)]
-        [SerializeField] private float Speed = 1f;
+        public float Speed = 1f;
 
         [Tooltip("Minimum sqrMagnitute of direction vector to allow movement, higher values can reduce jittery movement but may also stop the agent moving when you might want it to.")]
         [Range(0.001f, 0.5f)]

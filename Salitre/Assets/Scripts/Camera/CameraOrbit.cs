@@ -18,6 +18,9 @@ public class CameraOrbit : MonoBehaviour
     [Range(1, 1000)]
     [SerializeField] float sens;
 
+    [Range(1, 1000)]
+    [SerializeField] float lockSpeed;
+
     [Range(1, 30)]
     [SerializeField] float sharpness;
 
@@ -25,6 +28,7 @@ public class CameraOrbit : MonoBehaviour
     [SerializeField] float damping;
 
     float fov = 70;
+    float storedFov;
 
     [Range(50, 120)]
     [SerializeField] float maxFov, minFov;
@@ -39,6 +43,7 @@ public class CameraOrbit : MonoBehaviour
     bool lockCameraPos;
     private void Awake()
     {
+        storedFov = fov;
         player = ReInput.players.GetPlayer(0);
 
         Cursor.lockState = CursorLockMode.Confined;
@@ -60,8 +65,20 @@ public class CameraOrbit : MonoBehaviour
         }
         if (lockCameraPos)
         {
-            if (_dollyCart.m_Position != 0)
+            if (_dollyCart.m_Position != 0 || _vCamera.m_Lens.FieldOfView != storedFov)
             {
+                if (_vCamera.m_Lens.FieldOfView > storedFov - 0.5 && _vCamera.m_Lens.FieldOfView < storedFov + 0.5)
+                {
+                    _vCamera.m_Lens.FieldOfView = storedFov;
+                }
+                else
+                {
+                    if (_vCamera.m_Lens.FieldOfView != storedFov)
+                    {
+                        _vCamera.m_Lens.FieldOfView = Mathf.Lerp(_vCamera.m_Lens.FieldOfView, storedFov, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
+                    }
+                }
+
                 if (_dollyCart.m_Position > -1.5 && _dollyCart.m_Position < 1.5)
                 {
                     _dollyCart.m_Position = 0;
@@ -71,11 +88,11 @@ public class CameraOrbit : MonoBehaviour
                 {
                     if (_dollyCart.m_Position > 50)
                     {
-                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, sens, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
+                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, lockSpeed, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
                     }
                     else
                     {
-                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, -sens, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
+                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, -lockSpeed, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
                     }
                 }
             }

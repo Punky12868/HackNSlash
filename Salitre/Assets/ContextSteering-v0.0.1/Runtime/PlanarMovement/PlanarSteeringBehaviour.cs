@@ -12,7 +12,7 @@ namespace Friedforfun.ContextSteering.PlanarMovement
         [Tooltip("Is this behaviour attracted to this target or repulsed by it?")]
         [SerializeField] protected SteerDirection Direction = SteerDirection.ATTRACT;
         [Tooltip("How influential this behaviour is.")]
-        [SerializeField] protected float Weight = 1f;
+        [SerializeField] public float Weight = 1f;
         [Tooltip("Does the behaviour scale its effect based on distance?")]
         [SerializeField] protected bool ScaleOnDistance = false;
         [Tooltip("If using scaling, set to true to make targets more important as they approach, false sets targets further away to be more significant.")]

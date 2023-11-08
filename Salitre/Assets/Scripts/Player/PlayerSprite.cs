@@ -15,17 +15,17 @@ public class PlayerSprite : MonoBehaviour
         else
         {
             FindObjectOfType<TrailRenderer>().enabled = false;
-            if (playerInput.moveDir.x > 0.1)
+            if (playerInput.moveDir.x > 0)
             {
                 GetComponent<SpriteRenderer>().flipX = false;
                 GetComponent<SpriteRenderer>().sprite = GetComponent<AllSprites>().sprites[1];
             }
-            else if (playerInput.moveDir.x < -0.1)
+            else if (playerInput.moveDir.x < 0)
             {
                 GetComponent<SpriteRenderer>().flipX = true;
                 GetComponent<SpriteRenderer>().sprite = GetComponent<AllSprites>().sprites[1];
             }
-            else if (playerInput.moveDir.y > 0.1 || playerInput.moveDir.y < -0.1)
+            else if (playerInput.moveDir.y > 0 || playerInput.moveDir.y < 0)
             {
                 GetComponent<SpriteRenderer>().sprite = GetComponent<AllSprites>().sprites[1];
             }
