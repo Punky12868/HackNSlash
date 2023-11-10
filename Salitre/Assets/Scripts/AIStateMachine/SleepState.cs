@@ -12,7 +12,7 @@ public class SleepState : State
     }
     protected override void OnUpdate()
     {
-        if (movement.Speed != 0)
+        if (movement.Speed != 0 && !sc.cr_AttackRunning)
         {
             movement.Speed = Mathf.Lerp(movement.Speed, 0, 1 - Mathf.Exp(-sc.speedDamping * Time.unscaledDeltaTime));
         }

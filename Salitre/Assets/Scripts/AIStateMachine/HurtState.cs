@@ -6,15 +6,25 @@ public class HurtState : State
 {
     protected override void OnEnter()
     {
-        playerFollow.Weight = 0;
+        playerFollow.Weight = 0.5f;
         playerAvoidFollow.Weight = 1;
         patrolFollow.Weight = 0;
+        movement.Speed = 0;
+
+        if (sc.cr_AttackRunning || sc.cr_AvoidAttackRunning)
+        {
+            sc.StopCoroutinesCustom();
+        }
     }
     protected override void OnUpdate()
     {
-        if (movement.Speed != sc.normalSpeed)
+        if (!sc.cr_HurtRunning)
         {
-            movement.Speed = Mathf.Lerp(movement.Speed, sc.normalSpeed, 1 - Mathf.Exp(-sc.speedDamping * Time.unscaledDeltaTime));
+            sc.Change(2);
+        }
+        else
+        {
+            sc.Change(3);
         }
     }
 }

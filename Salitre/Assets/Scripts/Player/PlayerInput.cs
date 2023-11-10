@@ -18,9 +18,19 @@ public class PlayerInput : MonoBehaviour
     float h, v;
 
     [HideInInspector] public float speed;
+
+    public float dashSpeed;
+    public float dashCooldown;
+    float dashCooldownStored;
+
+    bool canDash;
+
     float maxVelocity;
     private void Awake()
     {
+        canDash = true;
+        dashCooldownStored = dashCooldown;
+
         player = ReInput.players.GetPlayer(0);
         maxVelocity = speed;
         playerRenderer = GetComponentInChildren<LookAtCamera>().gameObject;
@@ -35,6 +45,11 @@ public class PlayerInput : MonoBehaviour
         v = player.GetAxisRaw("Move Vertical");
 
         playerRenderer.transform.position = new Vector3(transform.position.x, transform.position.y - heightOffset, transform.position.z);
+
+        if (player.GetButton("Dash") && dashCooldown == 0)
+        {
+            Dash();
+        }
     }
     private void FixedUpdate()
     {
@@ -46,6 +61,33 @@ public class PlayerInput : MonoBehaviour
             if (rb.velocity.magnitude > maxVelocity)
             {
                 rb.velocity = rb.velocity.normalized * maxVelocity;
+            }
+        }
+
+        if (canDash)
+        {
+            Vector3 dashDir = GetComponentInChildren<WeaponCombo>().knockbackOrientation.forward /*+ GetComponentInChildren<WeaponCombo>().knockbackOrientation.right*/;
+            rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
+
+            canDash = false;
+        }
+
+        DashTimer();
+    }
+    void Dash()
+    {
+        canDash = true;
+        dashCooldown = dashCooldownStored;
+    }
+    void DashTimer()
+    {
+        if (dashCooldown != 0)
+        {
+            dashCooldown -= Time.fixedDeltaTime;
+
+            if (dashCooldown < 0.001)
+            {
+                dashCooldown = 0;
             }
         }
     }

@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hittable:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 128
   boxCollider: {fileID: 7300739591796541209}
 --- !u!1 &7596913259148278033
 GameObject:

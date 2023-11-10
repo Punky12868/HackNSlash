@@ -30,9 +30,11 @@ namespace Friedforfun.ContextSteering.Demo
             Vector3 moveVec = steer.MoveVector(); // In this case we look at the Movement Vector so we can evaluate how close to 0 it is and ocasionally remove some jitter, this evaluation is not always needed.
 
             if (moveVec.sqrMagnitude > ConfidenceThreshold)
-                control.SimpleMove(steer.MoveDirection() * Speed); // This line gets the movement vector from the Context steering controller.
+                //control.SimpleMove(steer.MoveDirection() * Speed); // This line gets the movement vector from the Context steering controller.
+                GetComponent<Rigidbody>().AddForce(steer.MoveDirection() * Speed, ForceMode.Force);
             else
-                control.SimpleMove(Vector3.zero);
+                //control.SimpleMove(Vector3.zero);
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
             // -------------------------------------------------------------------------------------
 
 

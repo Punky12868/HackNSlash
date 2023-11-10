@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skin: {fileID: 0}
   animator: {fileID: 0}
-  health: 0
+  health: 5
   speed: 5

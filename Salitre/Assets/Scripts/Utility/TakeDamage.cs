@@ -6,6 +6,7 @@ public class TakeDamage : MonoBehaviour
 {
     [SerializeField] float knockbackForce;
     [SerializeField] float freezeTime;
+    [SerializeField] bool isPlayer;
     public void GetDamage(int damage, Transform weaponDir)
     {
         if (GetComponent<Health>().health > 0)
@@ -13,6 +14,11 @@ public class TakeDamage : MonoBehaviour
             GetComponent<Health>().health -= damage;
             GetFeedback(weaponDir);
             Death();
+
+            if (!isPlayer)
+            {
+                OnHurtState();
+            }
         }
     }
     void Death()
@@ -31,5 +37,9 @@ public class TakeDamage : MonoBehaviour
     {
         Freeze freezeFeedback = GetComponent<Freeze>();
         freezeFeedback.StartCoroutine(freezeFeedback.StartFreeze(i));
+    }
+    void OnHurtState()
+    {
+        GetComponent<StateController>().ChangeState(GetComponent<StateController>().hurtState);
     }
 }

@@ -22,6 +22,9 @@ public class WeaponCombo : MonoBehaviour
     public Transform knockbackOrientation;
     public float moveForwardForce;
 
+    public bool isPlayer;
+    public bool notPlayerAttack;
+
     private void Start()
     {
         player = ReInput.players.GetPlayer(0);
@@ -37,27 +40,39 @@ public class WeaponCombo : MonoBehaviour
     {
         if (canAttack)
         {
-            if (player.GetButtonTimedPress("Attack", 0) && chargeAttack)
+            if (isPlayer)
             {
-                Debug.Log("Charging");
+                if (player.GetButtonTimedPress("Attack", 0) && chargeAttack)
+                {
+                    Debug.Log("Charging");
+                }
+                else if (player.GetButtonUp("Attack") && chargeAttack)
+                {
+                    chargeAttack = false;
+                    canMove = false;
+                    canAim = false;
+                    canAttack = false;
+                    anim.SetTrigger("" + combo);
+                    //GetComponent<SpawnHitbox>().Spawn(combo);
+                }
+                else if (player.GetButtonDown("Attack"))
+                {
+                    chargeAttack = false;
+                    canMove = false;
+                    canAim = false;
+                    canAttack = false;
+                    anim.SetTrigger("" + combo);
+                    //GetComponent<SpawnHitbox>().Spawn(combo);
+                }
             }
-            else if (player.GetButtonUp("Attack") && chargeAttack)
+            else
             {
-                chargeAttack = false;
-                canMove = false;
-                canAim = false;
-                canAttack = false;
-                anim.SetTrigger("" + combo);
-                //GetComponent<SpawnHitbox>().Spawn(combo);
-            }
-            else if (player.GetButtonDown("Attack"))
-            {
-                chargeAttack = false;
-                canMove = false;
-                canAim = false;
-                canAttack = false;
-                anim.SetTrigger("" + combo);
-                //GetComponent<SpawnHitbox>().Spawn(combo);
+                if (notPlayerAttack)
+                {
+                    anim.SetTrigger("" + combo);
+
+                    notPlayerAttack = false;
+                }
             }
         }
     }
