@@ -25,9 +25,14 @@ public class WeaponCombo : MonoBehaviour
     public bool isPlayer;
     public bool notPlayerAttack;
 
+    [SerializeField] float antiBugTime;
+    float antiBugStoredTime;
+
     private void Start()
     {
         player = ReInput.players.GetPlayer(0);
+
+        antiBugStoredTime = antiBugTime;
 
         chargeAttack = true;
         canAttack = true;
@@ -103,5 +108,25 @@ public class WeaponCombo : MonoBehaviour
     public void MoveForward()
     {
         GetComponentInParent<Knockback>().MoveOnAttack(knockbackOrientation, moveForwardForce);
+    }
+
+    void FixedUpdate()
+    {
+        if (!canMove)
+        {
+            if (antiBugTime > 0)
+            {
+                antiBugTime -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                canMove = true;
+                antiBugTime = antiBugStoredTime;
+            }
+        }
+        else if (canMove && antiBugTime < antiBugStoredTime)
+        {
+            antiBugTime = antiBugStoredTime;
+        }
     }
 }

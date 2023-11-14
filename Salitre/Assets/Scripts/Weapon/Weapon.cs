@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [HideInInspector] public int damage;
+    public int damage;
 }

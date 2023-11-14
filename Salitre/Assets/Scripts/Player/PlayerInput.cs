@@ -17,7 +17,7 @@ public class PlayerInput : MonoBehaviour
     Rigidbody rb;
     float h, v;
 
-    [HideInInspector] public float speed;
+    public float speed;
 
     public float dashSpeed;
     public float dashCooldown;

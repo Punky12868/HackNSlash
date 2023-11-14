@@ -12,6 +12,7 @@ TagManager:
   - Floor
   - RandomDir
   - PatrolPoint
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Hittable
   - Player
   - Obstacle
-  - 
+  - Occluder
   - 
   - 
   - 

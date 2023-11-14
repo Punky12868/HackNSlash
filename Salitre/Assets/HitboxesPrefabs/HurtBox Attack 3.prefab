@@ -93,5 +93,5 @@ MonoBehaviour:
   Hittable:
     serializedVersion: 2
     m_Bits: 72
-  center: {fileID: 8571321173570710587}
   boxCollider: {fileID: 7933582555370338865}
+  notEmerald: 1
