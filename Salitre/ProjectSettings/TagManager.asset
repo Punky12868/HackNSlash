@@ -13,6 +13,7 @@ TagManager:
   - RandomDir
   - PatrolPoint
   - Walls
+  - FadeSpawner
   layers:
   - Default
   - TransparentFX

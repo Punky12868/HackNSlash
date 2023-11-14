@@ -107,7 +107,7 @@ public class WeaponCombo : MonoBehaviour
 
     public void MoveForward()
     {
-        GetComponentInParent<Knockback>().MoveOnAttack(knockbackOrientation, moveForwardForce);
+        //GetComponentInParent<Knockback>().MoveOnAttack(knockbackOrientation, moveForwardForce);
     }
 
     void FixedUpdate()
