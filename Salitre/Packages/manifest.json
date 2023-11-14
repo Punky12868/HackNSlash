@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.compilerbutcher.foldericons": "https://github.com/compilerbutcher/Folder-Icons.git",
     "com.unity.2d.animation": "7.0.12",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "2.0.1",
