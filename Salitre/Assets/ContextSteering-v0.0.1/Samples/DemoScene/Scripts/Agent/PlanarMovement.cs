@@ -18,6 +18,7 @@ namespace Friedforfun.ContextSteering.Demo
         [Tooltip("Movement speed of the agent.")]
         [Range(0.1f, 20f)]
         public float Speed = 1f;
+        [SerializeField] float SpeedModifier;
 
         [Tooltip("Minimum sqrMagnitute of direction vector to allow movement, higher values can reduce jittery movement but may also stop the agent moving when you might want it to.")]
         [Range(0.001f, 0.5f)]
@@ -31,7 +32,7 @@ namespace Friedforfun.ContextSteering.Demo
 
             if (moveVec.sqrMagnitude > ConfidenceThreshold)
                 //control.SimpleMove(steer.MoveDirection() * Speed); // This line gets the movement vector from the Context steering controller.
-                GetComponent<Rigidbody>().AddForce(steer.MoveDirection() * Speed, ForceMode.Force);
+                GetComponent<Rigidbody>().AddForce(steer.MoveDirection() * Speed * SpeedModifier, ForceMode.Force);
             else
                 //control.SimpleMove(Vector3.zero);
                 GetComponent<Rigidbody>().velocity = Vector3.zero;
