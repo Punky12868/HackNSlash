@@ -94,3 +94,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   boxCollider: {fileID: 7933582555370338865}
+  notEmerald: 1

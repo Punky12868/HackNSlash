@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.compilerbutcher.foldericons": {
+      "version": "https://github.com/compilerbutcher/Folder-Icons.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bfa29ece2cec1cbf1e257ed51de5cb72093375d6"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.12",
       "depth": 0,

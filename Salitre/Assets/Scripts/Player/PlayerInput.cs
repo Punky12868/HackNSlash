@@ -17,13 +17,15 @@ public class PlayerInput : MonoBehaviour
     Rigidbody rb;
     float h, v;
 
-    [HideInInspector] public float speed;
+    public float speed;
 
+    [SerializeField] Transform dashOrientation;
     public float dashSpeed;
     public float dashCooldown;
     float dashCooldownStored;
 
     bool canDash;
+    bool dashing;
 
     float maxVelocity;
     private void Awake()
@@ -46,7 +48,7 @@ public class PlayerInput : MonoBehaviour
 
         playerRenderer.transform.position = new Vector3(transform.position.x, transform.position.y - heightOffset, transform.position.z);
 
-        if (player.GetButton("Dash") && dashCooldown == 0)
+        if (player.GetButtonDown("Dash") && dashCooldown == 0)
         {
             Dash();
         }
@@ -55,20 +57,24 @@ public class PlayerInput : MonoBehaviour
     {
         if (WeaponCombo.canMove)
         {
-            moveDir = orientation.forward * v + orientation.right * h;
-            rb.AddForce(moveDir.normalized * speed * 10, ForceMode.Force);
-
-            if (rb.velocity.magnitude > maxVelocity)
+            if (!dashing)
             {
-                rb.velocity = rb.velocity.normalized * maxVelocity;
+                moveDir = orientation.forward * v + orientation.right * h;
+                rb.AddForce(moveDir.normalized * speed * 10, ForceMode.Force);
+
+                if (rb.velocity.magnitude > maxVelocity)
+                {
+                    rb.velocity = rb.velocity.normalized * maxVelocity;
+                }
             }
         }
 
         if (canDash)
         {
-            Vector3 dashDir = GetComponentInChildren<WeaponCombo>().knockbackOrientation.forward /*+ GetComponentInChildren<WeaponCombo>().knockbackOrientation.right*/;
+            Vector3 dashDir = dashOrientation.forward;
             rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
 
+            
             canDash = false;
         }
 
@@ -76,6 +82,7 @@ public class PlayerInput : MonoBehaviour
     }
     void Dash()
     {
+        dashing = true;
         canDash = true;
         dashCooldown = dashCooldownStored;
     }
@@ -88,6 +95,7 @@ public class PlayerInput : MonoBehaviour
             if (dashCooldown < 0.001)
             {
                 dashCooldown = 0;
+                dashing = false;
             }
         }
     }

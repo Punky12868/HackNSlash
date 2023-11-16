@@ -63,6 +63,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 72
   boxCollider: {fileID: 7300739591796541209}
+  notEmerald: 1
 --- !u!1 &7596913259148278033
 GameObject:
   m_ObjectHideFlags: 0

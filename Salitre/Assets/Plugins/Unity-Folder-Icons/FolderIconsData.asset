@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ef9099a45d32944b521f81832839ad, type: 3}
+  m_Name: FolderIconsData
+  m_EditorClassIdentifier: 
+  guidTextureList:
+  - guid: ec52beb8e9f6114498ecfb538258d126
+    textureData:
+      color: {r: 0.39215687, g: 1, b: 0.9764706, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 90121199d97a5e740b58c9cc0cfb9227, type: 3}
+      folderTexture: {fileID: 2800000, guid: 736ae215d037227489c6ddfd215af09a, type: 3}
+      customTexture: {fileID: 0}
+  - guid: f0192475b449fab4b80537256558bcdd
+    textureData:
+      color: {r: 1, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: c8c07731227995f449fb244c7275f2ef, type: 3}
+      folderTexture: {fileID: 2800000, guid: e7d5be91869f8c342aa6b42b2dc7a77b, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 8113f85db864ac44a9fc60963b1eac62
+    textureData:
+      color: {r: 0, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 8745bbd9162779744b39ef5fd2931a07, type: 3}
+      folderTexture: {fileID: 2800000, guid: 1eeba9cbe52d7a547b346eefdcc29e16, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 7e456fd1ad14a334fbf8ca68d3a7cac4
+    textureData:
+      color: {r: 0, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 7b3c7ec30b64332479584006883d6ef2, type: 3}
+      folderTexture: {fileID: 2800000, guid: f09e0681f78e4684b9eb2764064bc6f9, type: 3}
+      customTexture: {fileID: 0}
+  - guid: cb79f395ee0f9bf48970c8612250a025
+    textureData:
+      color: {r: 1, g: 0.98117507, b: 0.4009434, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 4c7bb948a45f6ce479c24aee9bc86683, type: 3}
+      folderTexture: {fileID: 2800000, guid: 4d6adce3d3f6f134d843dae1d2c9e7dd, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 1f13b76f242e31e47a834ecc9ce2ada0
+    textureData:
+      color: {r: 1, g: 0.64705884, b: 0.2509804, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 55244a489a7de694db7b084b3ce317c8, type: 3}
+      folderTexture: {fileID: 2800000, guid: cd285c86c9da4dc458effa29590ae087, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 577750dbabd43fe47af2a0ae6df4d846
+    textureData:
+      color: {r: 0, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 2a9f331f763427c41921189afc350791, type: 3}
+      folderTexture: {fileID: 2800000, guid: a546c526ad0b51b44819d17db6b40fd8, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 67b5b2972e42249f6b0218ab166e0a66
+    textureData:
+      color: {r: 0.35059404, g: 0.33490568, b: 1, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: f7bb08415022bee4285ecdad5393bc23, type: 3}
+      folderTexture: {fileID: 2800000, guid: ccb26fcb33d86394da9749b048dc393a, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 9655367bd3ffc3f41a8444343d098162
+    textureData:
+      color: {r: 0.34901962, g: 0.33333334, b: 1, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 58027597c48726f4e9ba769b45d25d54, type: 3}
+      folderTexture: {fileID: 2800000, guid: 7e48090156ea86546a129496568ecfb7, type: 3}
+      customTexture: {fileID: 0}
+  - guid: ec61f3f830d661f42ab5c11f0c6147cc
+    textureData:
+      color: {r: 0.34901962, g: 0.33333334, b: 1, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: ebb8146636f0cba49846a99e28347d5e, type: 3}
+      folderTexture: {fileID: 2800000, guid: 7b60574328089a34b9774b77b25846a9, type: 3}
+      customTexture: {fileID: 0}
+  - guid: a226b70cc8834e7478e0420349bd082b
+    textureData:
+      color: {r: 0.25262952, g: 1, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 6ca7f2ac8950e5f49b7a4b236eb3316f, type: 3}
+      folderTexture: {fileID: 2800000, guid: dc7ac02ecb4018e4ea644b3acee2d873, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 94a4bd16e797334438f421e769efe4f2
+    textureData:
+      color: {r: 0, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: bab4de909afceb0439f6115d89f2778d, type: 3}
+      folderTexture: {fileID: 2800000, guid: f4a38baa8689d1141922f2525d2cc3dc, type: 3}
+      customTexture: {fileID: 0}
+  - guid: f54d1bd14bd3ca042bd867b519fee8cc
+    textureData:
+      color: {r: 0, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 02980f79591f173458e90bfb35927e23, type: 3}
+      folderTexture: {fileID: 2800000, guid: 2bf0577dffd91284cae9d41c8822b3cc, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 36c2193da6213a14092a79967605b023
+    textureData:
+      color: {r: 0.3915094, g: 1, b: 0.9766539, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: e87334b66b7387e46b39c5b3e82b95cd, type: 3}
+      folderTexture: {fileID: 2800000, guid: efe314b80960b34498f2c8788eb2ea1b, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 3d82c48c17e8b834a84f3cdcdb5c4fc1
+    textureData:
+      color: {r: 1, g: 0.64806455, b: 0.25, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 730438acf6834c24081ca2170a4541f0, type: 3}
+      folderTexture: {fileID: 2800000, guid: 43cda777fd7224341b06c7b154a6aa29, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 6ea315d0fd7389c41b19996891e99ae3
+    textureData:
+      color: {r: 1, g: 0.25943398, b: 0.95760185, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 460fb5a1acd98454fb5ea3e23dc95d33, type: 3}
+      folderTexture: {fileID: 2800000, guid: e53002a37e9523c47a31f6ce4897cac6, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 97c74c26c9685a64f941c734733d8712
+    textureData:
+      color: {r: 1, g: 0, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: e912325f406390145a816014f1217660, type: 3}
+      folderTexture: {fileID: 2800000, guid: 11ba8e3017008a34db772878d01351f9, type: 3}
+      customTexture: {fileID: 0}
+  - guid: 80c370fe2c6df384bb1394813dbb3c04
+    textureData:
+      color: {r: 0, g: 1, b: 0, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 62cd8dfcf39362f4f9bdbdce7a19dff4, type: 3}
+      folderTexture: {fileID: 2800000, guid: b6bc0a8444a9e6a439c2f5acae26fe59, type: 3}
+      customTexture: {fileID: 0}
+  headerContents:
+    headerIconGUIStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 2800000, guid: 133d9ad517af08341ac563e9f2bc02a1, type: 3}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 2800000, guid: 058350b981f4156458be2757341e8062, type: 3}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    resetButtonGUIContent:
+      m_Text: Reset
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+    openButton:
+      m_Text: Open
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  iconSetDataList:
+  - iconSetName: Default
+    iconSetData: []
+  - iconSetName: Medieval
+    iconSetData:
+    - folderName: Art
+      icon: {fileID: 2800000, guid: c60b83f53063a3349a9a00bc99c24396, type: 3}
+    - folderName: Prefab
+      icon: {fileID: 2800000, guid: b5208b7f5c74b5a409eeb8be7974a2fe, type: 3}
+    - folderName: Documents
+      icon: {fileID: 2800000, guid: aff419cd005b3b44cbb551c024040af8, type: 3}
+    - folderName: Textures
+      icon: {fileID: 2800000, guid: 6cdd6259096e65d4baed1d87715cfd2a, type: 3}
+    - folderName: Scripts
+      icon: {fileID: 2800000, guid: fee0c52fe1280a148bd859ea756972f3, type: 3}
+    - folderName: Fonts
+      icon: {fileID: 2800000, guid: e1b1c4d6a248e3443924047df871e131, type: 3}
+    - folderName: Settings
+      icon: {fileID: 2800000, guid: 12dc9df21fca3964c8f76207df520904, type: 3}
+    - folderName: Navigation
+      icon: {fileID: 2800000, guid: b785a57dd45d6ad4ebbeea27bc47caf5, type: 3}
+    - folderName: Packages
+      icon: {fileID: 2800000, guid: 04cee8cc1eee9ae4498cf754d6c8f76e, type: 3}
+    - folderName: Models
+      icon: {fileID: 2800000, guid: 04c75d6c14c07b846bd9882c5d0733e5, type: 3}
+    - folderName: Musics
+      icon: {fileID: 2800000, guid: 251bf28a980ef0043b9f3af8de533f38, type: 3}
+    - folderName: Environment
+      icon: {fileID: 2800000, guid: a09cd29632a3f66498bc81bf21195551, type: 3}
+  currentIconSetIndex: 0
