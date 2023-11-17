@@ -10,7 +10,7 @@ public class DoorController : MonoBehaviour
 
     [HideInInspector] public Transform tpPoint;
     [SerializeField] Transform assignedDoor;
-    [SerializeField] bool canEnter;
+    [HideInInspector] public bool canEnter;
 
     public UnityEvent OnEnter;
     private void Awake()
