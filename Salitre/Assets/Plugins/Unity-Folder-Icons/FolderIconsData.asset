@@ -121,6 +121,12 @@ MonoBehaviour:
       emptyFolderTexture: {fileID: 2800000, guid: 62cd8dfcf39362f4f9bdbdce7a19dff4, type: 3}
       folderTexture: {fileID: 2800000, guid: b6bc0a8444a9e6a439c2f5acae26fe59, type: 3}
       customTexture: {fileID: 0}
+  - guid: 5688c44fa88e62c409846f412022079d
+    textureData:
+      color: {r: 0, g: 1, b: 0.13945818, a: 0}
+      emptyFolderTexture: {fileID: 2800000, guid: 3d9f62d9ca1b1f24d803d9485fc97193, type: 3}
+      folderTexture: {fileID: 2800000, guid: d558b132babd52d42a159194a28f4d72, type: 3}
+      customTexture: {fileID: 0}
   headerContents:
     headerIconGUIStyle:
       m_Name: 

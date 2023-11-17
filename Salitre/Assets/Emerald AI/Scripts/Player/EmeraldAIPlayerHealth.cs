@@ -27,12 +27,15 @@ namespace EmeraldAI.Example
 
         public void DamagePlayer (int DamageAmount)
         {
-            CurrentHealth -= DamageAmount;
-            DamageEvent.Invoke();
-
-            if (CurrentHealth <= 0)
+            if (!GetComponent<PlayerInput>().dashing)
             {
-                PlayerDeath();
+                CurrentHealth -= DamageAmount;
+                DamageEvent.Invoke();
+
+                if (CurrentHealth <= 0)
+                {
+                    PlayerDeath();
+                }
             }
         }
 

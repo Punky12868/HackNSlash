@@ -24,8 +24,8 @@ public class PlayerInput : MonoBehaviour
     public float dashCooldown;
     float dashCooldownStored;
 
+    [HideInInspector] public bool dashing;
     bool canDash;
-    bool dashing;
 
     float maxVelocity;
     private void Awake()
