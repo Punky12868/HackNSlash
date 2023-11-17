@@ -22,6 +22,8 @@ public class FadeController : MonoBehaviour
 
     Vector3 finalScale;
     Vector3 errorMargen;
+
+    int i;
     private void Awake()
     {
         mask.localScale = new Vector3(fadeInitialScale, fadeInitialScale);
@@ -69,6 +71,11 @@ public class FadeController : MonoBehaviour
                     if (mask.localScale.x > finalScale.x - errorMargen.x)
                     {
                         mask.localScale = finalScale;
+                    }
+                    else if (mask.localScale.x > finalScale.x / 2 && i == 0)
+                    {
+                        i++;
+                        FindObjectOfType<SpawnFade>().onMidFadeOut.Invoke();
                     }
                 }
                 else

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2659,7 +2659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554294774}
-  m_LocalRotation: {x: 0.38267562, y: -0.000000033528515, z: 0.000000013887635, w: 0.9238828}
+  m_LocalRotation: {x: 0.38267562, y: -0.00000006532187, z: 0.000000027056558, w: 0.9238828}
   m_LocalPosition: {x: 0.0000009536743, y: 10.13, z: -8.913301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3358,8 +3358,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.71329886, b: 0.3066038, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3399,7 +3399,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.38267562, y: -0.000000033528515, z: 0.000000013887635, w: 0.9238828}
+  m_LocalRotation: {x: 0.38267562, y: -0.00000006532187, z: 0.000000027056558, w: 0.9238828}
   m_LocalPosition: {x: 0.0000009536743, y: 10.13, z: -8.913301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6827,7 +6827,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  onFadeOutEnd:
+  onMidFadeOut:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1934242170}
@@ -6842,6 +6842,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onFadeOutEnd:
+    m_PersistentCalls:
+      m_Calls: []
   onLoadingScreenSpawn:
     m_PersistentCalls:
       m_Calls: []

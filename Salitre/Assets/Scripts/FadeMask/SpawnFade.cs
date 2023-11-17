@@ -9,7 +9,7 @@ public class SpawnFade : MonoBehaviour
     [SerializeField] bool usingInput;
 
     [SerializeField] GameObject[] fades;
-    public UnityEvent onFadeInSpawn, onFadeInEnd, onFadeOutSpawn, onFadeOutEnd, onLoadingScreenSpawn, onLoadingScreenEnd, onDoorFadeInSpawn, onDoorFadeInEnd;
+    public UnityEvent onFadeInSpawn, onFadeInEnd, onFadeOutSpawn, onMidFadeOut, onFadeOutEnd, onLoadingScreenSpawn, onLoadingScreenEnd, onDoorFadeInSpawn, onDoorFadeInEnd;
     public void SpawnBasicFadeIn()
     {
         Instantiate(fades[0], transform);
