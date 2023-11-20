@@ -1299,7 +1299,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1465620771}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3123,6 +3124,7 @@ MonoBehaviour:
   npcRoom: 0
   allGo:
   - {fileID: 1647893876}
+  i: 0
 --- !u!1 &848839010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,6 +3175,7 @@ MonoBehaviour:
   npcRoom: 0
   allGo:
   - {fileID: 455403094}
+  i: 0
 --- !u!1 &878292563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,15 +4342,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _vCamera: {fileID: 554294775}
   _dollyCart: {fileID: 1240622927}
-  sens: 75
-  lockSpeed: 420
-  sharpness: 2.5
-  damping: 5
   maxFov: 90
   minFov: 50
-  fovDamping: 7.5
-  fovSens: 0.5
   lerpLockDuration: 0.5
+  dollyMaxSpeed: 50
+  controllerSens: 50
+  controllerLockSpeed: 500
+  controllerSharpness: 2
+  controllerDamping: 3.75
+  controllerFovDamping: 6.5
+  controllerFovSens: 1
+  mouseSens: 50
+  mouseLockSpeed: 500
+  mouseSharpness: 2
+  mouseDamping: 3.75
+  mouseFovDamping: 6.5
+  mouseFovSens: 100
 --- !u!1 &1258544719
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,6 +4677,7 @@ GameObject:
   - component: {fileID: 1376261413}
   - component: {fileID: 1376261412}
   - component: {fileID: 1376261411}
+  - component: {fileID: 1376261423}
   m_Layer: 3
   m_Name: Emerald AI
   m_TagString: Untagged
@@ -4910,7 +4921,19 @@ MonoBehaviour:
   WeaponTrail: {fileID: 0}
   DeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1376261423}
+        m_TargetAssemblyTypeName: OnEnemyDeath, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   DamageEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5730,6 +5753,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 0
+--- !u!114 &1376261423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376261410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98a573621da034d8ca48d90d3ac969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1382008523
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,6 +5885,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1465620770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1465620771}
+  - component: {fileID: 1465620772}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1465620771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465620770}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.565976, y: 9.148437, z: -6.571365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 409372541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1465620772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465620770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5618501c8a22a74ca376362249a9b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482570081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5902,6 +5981,7 @@ MonoBehaviour:
   npcRoom: 1
   allGo:
   - {fileID: 1959429087}
+  i: 0
 --- !u!1 &1569421336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,6 +6063,7 @@ MonoBehaviour:
   npcRoom: 0
   allGo:
   - {fileID: 1154494296}
+  i: 0
 --- !u!1 &1647893876
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,6 +6670,7 @@ MonoBehaviour:
   npcRoom: 0
   allGo:
   - {fileID: 2082512294}
+  i: 0
 --- !u!1 &1824477090
 GameObject:
   m_ObjectHideFlags: 0

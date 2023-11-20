@@ -8,22 +8,23 @@ public class DoorController : MonoBehaviour
     [SerializeField] Material debugCanEnter;
     [SerializeField] Material debugCannotEnter;
 
-    [HideInInspector] public Transform tpPoint;
+    public Transform tpPoint;
     [SerializeField] Transform assignedDoor;
-    [SerializeField] bool canEnter;
+    public bool canEnter;
 
     public UnityEvent OnEnter;
     private void Awake()
     {
-        if (assignedDoor == null || !canEnter)
+        if (assignedDoor != null)
+        {
+            tpPoint = assignedDoor.GetChild(0);
+        }
+        else if (assignedDoor == null || !canEnter)
         {
             canEnter = false;
             GetComponent<Renderer>().material.color = debugCannotEnter.color;
         }
-        else if (assignedDoor != null)
-        {
-            tpPoint = assignedDoor.GetChild(0);
-        }
+        
     }
     private void Update()
     {
