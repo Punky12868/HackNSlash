@@ -21,7 +21,7 @@ public class AimRotation : MonoBehaviour
         float horiz = player.GetAxisRaw("Move Weapon H");
         float vert = player.GetAxisRaw("Move Weapon V");
 
-        if (WeaponCombo.canAim && !CameraOrbit.orbiting)
+        if (WeaponCombo.canAim)
         {
             if (GetCurrentInput.isMouseInput)
             {

@@ -10,6 +10,7 @@ public class CameraOrbit : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera _vCamera;
     [SerializeField] CinemachineDollyCart _dollyCart;
+    CinemachineTrackedDolly _vDollyTrack;
 
     float mouseX;
     float scrollY;
@@ -17,10 +18,10 @@ public class CameraOrbit : MonoBehaviour
 
     [Header ("Global Settings")]
 
-    float fov = 70;
+    float fov = 15;
     float storedFov;
 
-    [Range(50, 120)]
+    [Range(1, 15)]
     [SerializeField] float maxFov, minFov;
 
     [SerializeField] float lerpLockDuration;
@@ -74,14 +75,16 @@ public class CameraOrbit : MonoBehaviour
     //-----------------------------------------------------------------
 
     bool lockCameraPos;
-    public static bool orbiting;
+    float cameraPos;
     private void Awake()
     {
+        cameraPos = -0.5f;
         storedFov = fov;
         player = ReInput.players.GetPlayer(0);
 
         Cursor.lockState = CursorLockMode.Confined;
-        _vCamera.m_Lens.FieldOfView = fov;
+        _vDollyTrack = _vCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
+        _vCamera.m_Lens.OrthographicSize = fov;
 
         sens = controllerSens;
         lockSpeed = controllerLockSpeed;
@@ -121,7 +124,6 @@ public class CameraOrbit : MonoBehaviour
     }
     void GetInput()
     {
-        mouseX = player.GetAxis("Camera Orbit");
         scrollY = player.GetAxis("Camera Zoom");
         values = new Vector3(mouseX, scrollY, 0);
 
@@ -137,23 +139,22 @@ public class CameraOrbit : MonoBehaviour
     {
         if (lockCameraPos)
         {
-            if (_dollyCart.m_Position != 0 || _vCamera.m_Lens.FieldOfView != storedFov)
+            if (_vDollyTrack.m_PathPosition != 0 || _vCamera.m_Lens.OrthographicSize != storedFov)
             {
-                if (_vCamera.m_Lens.FieldOfView > storedFov - 0.25 && _vCamera.m_Lens.FieldOfView < storedFov + 0.25)
+                if (_vCamera.m_Lens.OrthographicSize > storedFov - 0.25 && _vCamera.m_Lens.OrthographicSize < storedFov + 0.25)
                 {
-                    _vCamera.m_Lens.FieldOfView = storedFov;
+                    _vCamera.m_Lens.OrthographicSize = storedFov;
                     fov = storedFov;
                 }
-                else if (_vCamera.m_Lens.FieldOfView != storedFov)
+                else if (_vCamera.m_Lens.OrthographicSize != storedFov)
                 {
-                    _vCamera.m_Lens.FieldOfView = Mathf.Lerp(_vCamera.m_Lens.FieldOfView, storedFov, 1 - Mathf.Exp(-lerpLockDuration * 10 * Time.unscaledDeltaTime));
-                    fov = _vCamera.m_Lens.FieldOfView;
+                    _vCamera.m_Lens.OrthographicSize = Mathf.Lerp(_vCamera.m_Lens.OrthographicSize, storedFov, 1 - Mathf.Exp(-lerpLockDuration * 10 * Time.unscaledDeltaTime));
+                    fov = _vCamera.m_Lens.OrthographicSize;
                 }
 
-                if (_dollyCart.m_Position > -1.5 && _dollyCart.m_Position < 1.5)
+                if (_vDollyTrack.m_PathPosition > -1.5 && _vDollyTrack.m_PathPosition < 1.5)
                 {
-                    _dollyCart.m_Position = 0;
-                    _dollyCart.m_Speed = 0;
+                    _vDollyTrack.m_PathPosition = 0;
                 }
                 else
                 {
@@ -175,6 +176,11 @@ public class CameraOrbit : MonoBehaviour
     }
     void ActivateCameraOrbit()
     {
+        if (_vDollyTrack.m_PathPosition != cameraPos)
+        {
+            _vDollyTrack.m_PathPosition = Mathf.Lerp(_vDollyTrack.m_PathPosition, cameraPos, 1 - Mathf.Exp(-sharpness * 3 * Time.unscaledDeltaTime));
+        }
+
         if (_dollyCart.m_Speed > dollyMaxSpeed)
         {
             _dollyCart.m_Speed = dollyMaxSpeed;
@@ -184,17 +190,16 @@ public class CameraOrbit : MonoBehaviour
             _dollyCart.m_Speed = -dollyMaxSpeed;
         }
 
-        if (player.GetButton("Activate Orbit"))
+        if (player.GetButtonDown("Camera Orbit Right"))
         {
-            orbiting = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, values.x * sens, 1 - Mathf.Exp(-sharpness * Time.unscaledDeltaTime));
+            //_dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, values.x * sens, 1 - Mathf.Exp(-sharpness * Time.unscaledDeltaTime));
+            
+            cameraPos -= 1;
         }
-        else
+        else if (player.GetButtonDown("Camera Orbit Left"))
         {
-            orbiting = false;
-            Cursor.lockState = CursorLockMode.Confined;
-            _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, 0, 1 - Mathf.Exp(-damping * Time.unscaledDeltaTime));
+            //_dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, 0, 1 - Mathf.Exp(-damping * Time.unscaledDeltaTime));
+            cameraPos += 1;
         }
     }
     void FovController()
@@ -216,9 +221,9 @@ public class CameraOrbit : MonoBehaviour
             fov = maxFov;
         }
 
-        if (_vCamera.m_Lens.FieldOfView != fov && !lockCameraPos)
+        if (_vCamera.m_Lens.OrthographicSize != fov && !lockCameraPos)
         {
-            _vCamera.m_Lens.FieldOfView = Mathf.Lerp(_vCamera.m_Lens.FieldOfView, fov, 1 - Mathf.Exp(-fovDamping * Time.unscaledDeltaTime));
+            _vCamera.m_Lens.OrthographicSize = Mathf.Lerp(_vCamera.m_Lens.OrthographicSize, fov, 1 - Mathf.Exp(-fovDamping * Time.unscaledDeltaTime));
         }
     }
 }

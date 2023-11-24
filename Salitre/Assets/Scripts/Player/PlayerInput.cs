@@ -71,9 +71,24 @@ public class PlayerInput : MonoBehaviour
 
         if (canDash)
         {
-            Vector3 dashDir = dashOrientation.forward;
-            rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
-
+            if (GetCurrentInput.isMouseInput)
+            {
+                if (moveDir != Vector3.zero)
+                {
+                    Vector3 dashDir = moveDir;
+                    rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
+                }
+                else
+                {
+                    Vector3 dashDir = dashOrientation.forward;
+                    rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
+                }
+            }
+            else
+            {
+                Vector3 dashDir = dashOrientation.forward;
+                rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
+            }
             
             canDash = false;
         }
