@@ -18,8 +18,8 @@ public class AimRotation : MonoBehaviour
     }
     private void Update()
     {
-        float horiz = player.GetAxisRaw("Move Weapon H");
-        float vert = player.GetAxisRaw("Move Weapon V");
+        float horiz = player.GetAxisRaw("Move Horizontal");
+        float vert = player.GetAxisRaw("Move Vertical");
 
         if (WeaponCombo.canAim)
         {

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 17b1333b65c52b246909acf0061c5759
+  - enabled: 1
+    path: Assets/Scenes/EmeraldTestRoom 3.unity
+    guid: 78a480a5a1de02b4c9f7f4c421c67ed3
   m_configObjects: {}
