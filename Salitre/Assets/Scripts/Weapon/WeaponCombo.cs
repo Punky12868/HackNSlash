@@ -11,13 +11,13 @@ public class WeaponCombo : MonoBehaviour
     [HideInInspector] public bool canAttack;
     public static bool canMove;
     public static bool canAim;
-    bool chargeAttack;
 
     [Header("Combo State")]
 
     public Animator anim;
 
     public int combo;
+    public int specialAttackID;
 
     public Transform knockbackOrientation;
     public float moveForwardForce;
@@ -28,46 +28,53 @@ public class WeaponCombo : MonoBehaviour
     [SerializeField] float antiBugTime;
     float antiBugStoredTime;
 
+    UnityEngine.UI.Slider powerSlider;
+    public static bool specialAttackOn;
     private void Start()
     {
         player = ReInput.players.GetPlayer(0);
 
         antiBugStoredTime = antiBugTime;
 
-        chargeAttack = true;
         canAttack = true;
         canMove = true;
         canAim = true;
 
         anim = GetComponent<Animator>();
+
+        powerSlider = GameObject.FindGameObjectWithTag("PowerSlider").GetComponent<UnityEngine.UI.Slider>();
     }
     private void Update()
     {
+        if (powerSlider.value == powerSlider.maxValue && !specialAttackOn)
+        {
+            specialAttackOn = true;
+        }
+
         if (canAttack)
         {
             if (isPlayer)
             {
-                if (player.GetButtonTimedPress("Attack", 0) && chargeAttack)
+                /*if (player.GetButtonTimedPress("Attack", 0) && chargeAttack)
                 {
                     Debug.Log("Charging");
-                }
-                else if (player.GetButtonUp("Attack") && chargeAttack)
+                }*/
+                if (player.GetButtonDown("Attack"))
                 {
-                    chargeAttack = false;
                     canMove = false;
                     canAim = false;
                     canAttack = false;
                     anim.SetTrigger("" + combo);
                     //GetComponent<SpawnHitbox>().Spawn(combo);
                 }
-                else if (player.GetButtonDown("Attack"))
+                else if (player.GetButtonDown("PowerAttack") && specialAttackOn)
                 {
-                    chargeAttack = false;
+                    specialAttackOn = true;
+                    powerSlider.value = powerSlider.minValue;
                     canMove = false;
                     canAim = false;
                     canAttack = false;
-                    anim.SetTrigger("" + combo);
-                    //GetComponent<SpawnHitbox>().Spawn(combo);
+                    anim.SetTrigger("" + specialAttackID);
                 }
             }
             else
@@ -101,7 +108,6 @@ public class WeaponCombo : MonoBehaviour
         canAttack = true;
         canMove = true;
         canAim = true;
-        chargeAttack = true;
     }
     #endregion
 

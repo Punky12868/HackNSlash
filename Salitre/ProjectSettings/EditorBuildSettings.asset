@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 17b1333b65c52b246909acf0061c5759
   - enabled: 1
-    path: Assets/Scenes/EmeraldTestRoom 3.unity
-    guid: 78a480a5a1de02b4c9f7f4c421c67ed3
+    path: Assets/Scenes/EmeraldTestRoom 4.unity
+    guid: 456b10880a2b19446923d7c48776c434
   m_configObjects: {}

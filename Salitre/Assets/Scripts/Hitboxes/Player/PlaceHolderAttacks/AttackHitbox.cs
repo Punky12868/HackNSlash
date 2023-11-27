@@ -10,13 +10,15 @@ public class AttackHitbox : MonoBehaviour
     Vector3 pos;
     Quaternion rot;
     public bool notEmerald;
+    int i;
     private void Awake()
     {
-
         boxCollider = GetComponent<BoxCollider>();
 
         if (!notEmerald)
         {
+            UnityEngine.UI.Slider powerSlider = GameObject.FindGameObjectWithTag("PowerSlider").GetComponent<UnityEngine.UI.Slider>();
+
             GetComponentInParent<AimRotation>().GetComponentInChildren<SpawnHitbox>().currentHitbox = this.gameObject;
 
             pos = GetComponentInParent<AimRotation>().GetComponentInChildren<SpawnHitbox>().hitboxSpawnPoint.position;
@@ -30,6 +32,11 @@ public class AttackHitbox : MonoBehaviour
                 {
                     int DamageAmount = GetComponentInParent<AimRotation>().GetComponentInChildren<Weapon>().damage;
                     entity.gameObject.GetComponent<EmeraldAISystem>().Damage(DamageAmount, EmeraldAISystem.TargetType.AI, transform, 300);
+
+                    if (powerSlider.value < powerSlider.maxValue && !WeaponCombo.specialAttackOn)
+                    {
+                        powerSlider.value++;
+                    }
                 }
                 //Damages an AI's location based damage component
                 else if (entity.gameObject.GetComponent<LocationBasedDamageArea>() != null)
@@ -40,6 +47,11 @@ public class AttackHitbox : MonoBehaviour
                 }
 
                 Debug.Log("Hit: " + entity.gameObject.name);
+            }
+
+            if (WeaponCombo.specialAttackOn)
+            {
+                WeaponCombo.specialAttackOn = false;
             }
         }
         /*else

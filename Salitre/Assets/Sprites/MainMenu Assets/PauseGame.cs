@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using Rewired;
 
@@ -11,10 +12,19 @@ public class PauseGame : MonoBehaviour
     public UnityEngine.UI.Button firstSelect;
 
     public static bool paused;
+
+    public UnityEvent onPause;
+    public UnityEvent onResume;
+
+    public static UnityEvent onStaticPause;
+    public static UnityEvent onStaticResume;
     private void Awake()
     {
         input = ReInput.players.GetPlayer(0);
         menuDisplay.SetActive(false);
+
+        onStaticPause = onPause;
+        onStaticResume = onResume;
     }
     private void Update()
     {
@@ -31,10 +41,12 @@ public class PauseGame : MonoBehaviour
         if (paused)
         {
             paused = false;
+            onStaticResume.Invoke();
         }
         else if (!paused)
         {
             paused = true;
+            onStaticPause.Invoke();
         }
     }
     void PauseOrUnpauseGame()

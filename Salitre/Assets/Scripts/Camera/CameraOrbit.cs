@@ -21,7 +21,7 @@ public class CameraOrbit : MonoBehaviour
     float fov = 15;
     float storedFov;
 
-    [Range(1, 15)]
+    [Range(1, 25)]
     [SerializeField] float maxFov, minFov;
 
     [SerializeField] float lerpLockDuration;
@@ -139,37 +139,9 @@ public class CameraOrbit : MonoBehaviour
     {
         if (lockCameraPos)
         {
-            if (_vDollyTrack.m_PathPosition != 0 || _vCamera.m_Lens.OrthographicSize != storedFov)
+            if (_vCamera.m_Lens.OrthographicSize != storedFov)
             {
-                if (_vCamera.m_Lens.OrthographicSize > storedFov - 0.25 && _vCamera.m_Lens.OrthographicSize < storedFov + 0.25)
-                {
-                    _vCamera.m_Lens.OrthographicSize = storedFov;
-                    fov = storedFov;
-                }
-                else if (_vCamera.m_Lens.OrthographicSize != storedFov)
-                {
-                    _vCamera.m_Lens.OrthographicSize = Mathf.Lerp(_vCamera.m_Lens.OrthographicSize, storedFov, 1 - Mathf.Exp(-lerpLockDuration * 10 * Time.unscaledDeltaTime));
-                    fov = _vCamera.m_Lens.OrthographicSize;
-                }
-
-                if (_vDollyTrack.m_PathPosition > -1.5 && _vDollyTrack.m_PathPosition < 1.5)
-                {
-                    _vDollyTrack.m_PathPosition = 0;
-                }
-                else
-                {
-                    if (_dollyCart.m_Position > 25)
-                    {
-                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, lockSpeed, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
-                    }
-                    else
-                    {
-                        _dollyCart.m_Speed = Mathf.Lerp(_dollyCart.m_Speed, -lockSpeed, 1 - Mathf.Exp(-lerpLockDuration * Time.unscaledDeltaTime));
-                    }
-                }
-            }
-            else
-            {
+                fov = storedFov;
                 lockCameraPos = false;
             }
         }
