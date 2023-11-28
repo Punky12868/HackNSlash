@@ -15,6 +15,7 @@ TagManager:
   - Walls
   - FadeSpawner
   - PowerSlider
+  - PopUp
   layers:
   - Default
   - TransparentFX

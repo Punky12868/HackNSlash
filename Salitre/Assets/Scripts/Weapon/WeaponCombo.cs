@@ -113,7 +113,7 @@ public class WeaponCombo : MonoBehaviour
 
     public void MoveForward()
     {
-        //GetComponentInParent<Knockback>().MoveOnAttack(knockbackOrientation, moveForwardForce);
+        GetComponentInParent<Rigidbody>().AddForce(FindObjectOfType<AimRotation>().aimOrientation.forward.normalized * 7, ForceMode.Impulse);
     }
 
     void FixedUpdate()

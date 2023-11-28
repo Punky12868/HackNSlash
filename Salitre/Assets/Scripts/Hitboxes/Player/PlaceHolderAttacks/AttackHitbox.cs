@@ -31,8 +31,15 @@ public class AttackHitbox : MonoBehaviour
                 if (entity.gameObject.GetComponent<EmeraldAISystem>() != null)
                 {
                     int DamageAmount = GetComponentInParent<AimRotation>().GetComponentInChildren<Weapon>().damage;
+                    Vector3 KnockDir = GetComponentInParent<AimRotation>().aimOrientation.forward;
                     entity.gameObject.GetComponent<EmeraldAISystem>().Damage(DamageAmount, EmeraldAISystem.TargetType.AI, transform, 300);
 
+                    /*if (!entity.gameObject.GetComponent<OnEnemyDeath>().dead)
+                    {
+                        entity.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = KnockDir.normalized * 15;
+                        entity.gameObject.GetComponent<OnEnemyDeath>().StartCoroutine(entity.gameObject.GetComponent<OnEnemyDeath>().OnHit());
+                    }*/
+                    
                     if (powerSlider.value < powerSlider.maxValue && !WeaponCombo.specialAttackOn)
                     {
                         powerSlider.value++;

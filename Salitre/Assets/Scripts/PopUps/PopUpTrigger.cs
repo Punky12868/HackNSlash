@@ -9,9 +9,33 @@ public class PopUpTrigger : MonoBehaviour
 
     [SerializeField] bool spawnIzq;
     bool alreadyTriggered;
+    private void Awake()
+    {
+        switch (popUpType)
+        {
+
+            case popUps.Movement:
+
+                if (spawnIzq)
+                {
+                    PopUpSpawner.izqPopUp = true;
+                }
+                else
+                {
+                    PopUpSpawner.izqPopUp = false;
+                }
+
+                PopUpSpawner.MovementPopUp();
+
+                alreadyTriggered = true;
+                break;
+            default:
+                break;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !alreadyTriggered)
+        if (other.gameObject.CompareTag("Player") && !alreadyTriggered && !GameObject.FindGameObjectWithTag("PopUp"))
         {
             if (spawnIzq)
             {
@@ -24,9 +48,6 @@ public class PopUpTrigger : MonoBehaviour
 
             switch (popUpType)
             {
-                case popUps.Movement:
-                    PopUpSpawner.MovementPopUp();
-                    break;
                 case popUps.Dash:
                     PopUpSpawner.DashPopUp();
                     break;

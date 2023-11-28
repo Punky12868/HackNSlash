@@ -6,7 +6,7 @@ public class PopOutNormalAttack : PopUpCore
 {
     protected override void PoppingOutCondition()
     {
-        if (input.GetButtonDown("Attack"))
+        if (input.GetButton("Attack"))
         {
             popingOut = true;
         }
