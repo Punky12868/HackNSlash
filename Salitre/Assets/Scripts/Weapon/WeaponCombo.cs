@@ -8,7 +8,7 @@ public class WeaponCombo : MonoBehaviour
     [SerializeField] Weapon weapon;
     Player player;
 
-    [HideInInspector] public bool canAttack;
+    public static bool canAttack;
     public static bool canMove;
     public static bool canAim;
 
@@ -53,7 +53,7 @@ public class WeaponCombo : MonoBehaviour
 
         if (canAttack)
         {
-            if (isPlayer)
+            if (isPlayer && !PlayerInput.dashing)
             {
                 /*if (player.GetButtonTimedPress("Attack", 0) && chargeAttack)
                 {
