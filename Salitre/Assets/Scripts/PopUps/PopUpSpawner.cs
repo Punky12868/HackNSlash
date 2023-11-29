@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class PopUpSpawner : MonoBehaviour
@@ -13,8 +14,14 @@ public class PopUpSpawner : MonoBehaviour
 
     [SerializeField] GameObject[] allPopUps;
     static GameObject[] allStaticPopUps;
+
+    [SerializeField] UnityEvent[] onAwake, onCompleted;
+    public static UnityEvent[] onAwakeStatic, onCompletedStatic;
     private void Awake()
     {
+        onAwakeStatic = onAwake;
+        onCompletedStatic = onCompleted;
+
         staticPopUpSpawnPoint = popUpSpawnPoint;
 
         izqStaticStartPos = izqStartPos;

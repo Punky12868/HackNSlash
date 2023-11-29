@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using DG.Tweening;
 using Rewired;
@@ -15,10 +16,13 @@ public class PopUpCore : MonoBehaviour
     float destroyTime = 1;
     [HideInInspector] public bool popingOut;
     bool destroying;
+    bool onCompletedEventInvoked;
 
     [SerializeField] bool usingSlider;
     [SerializeField] float timeBeforeTakingInput = 1.5f;
     [HideInInspector] public UnityEngine.UI.Slider timeValue;
+
+    public UnityEvent onAwake, onCompleted;
     private void Awake()
     {
         input = ReInput.players.GetPlayer(0);
@@ -54,6 +58,12 @@ public class PopUpCore : MonoBehaviour
         {
             if (popingOut)
             {
+                if (!onCompletedEventInvoked)
+                {
+                    onCompletedEventInvoked = true;
+                    onCompleted.Invoke();
+                }
+
                 if (popOutTime > 0)
                 {
                     popOutTime -= Time.deltaTime;

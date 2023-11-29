@@ -95,5 +95,11 @@ MonoBehaviour:
   popOutTime: 1
   popingOut: 0
   usingSlider: 0
-  timeBeforeTakingInput: 1.5
+  timeBeforeTakingInput: 0
   timeValue: {fileID: 0}
+  onAwake:
+    m_PersistentCalls:
+      m_Calls: []
+  onCompleted:
+    m_PersistentCalls:
+      m_Calls: []

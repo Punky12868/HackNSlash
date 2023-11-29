@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class IndividualPos : MonoBehaviour
@@ -11,11 +12,45 @@ public class IndividualPos : MonoBehaviour
     [SerializeField] IndividualPos pickaxe, knife, bomb;
 
     [SerializeField] float travelTime;
-    [SerializeField] int i;
+    public int i;
+    int index;
 
     public bool blocked;
+
+    [SerializeField] float cooldown;
+    float internalCooldown;
+    bool cantChange;
+
+    Vector3 storedTransformPos, storedTransformRot;
+    private void Awake()
+    {
+        index = i;
+        storedTransformPos = transform.position;
+        storedTransformRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+    }
     private void Update()
     {
+        if (blocked && i != index)
+        {
+            if (index == 0)
+            {
+                bomb.i = bomb.index;
+                knife.i = knife.index;
+            }
+            else if (index == 1)
+            {
+                bomb.i = bomb.index;
+                pickaxe.i = pickaxe.index;
+            }
+            else if (index == 2)
+            {
+                pickaxe.i = pickaxe.index;
+                knife.i = knife.index;
+            }
+
+            i = index;
+        }
+
         if (i == 0 && transform.position != SelectWeapon.pickaxePos)
         {
             transform.DOMove(SelectWeapon.pickaxePos, travelTime).SetEase(Ease.OutElastic);
@@ -28,50 +63,42 @@ public class IndividualPos : MonoBehaviour
         {
             transform.DOMove(SelectWeapon.bombPos, travelTime).SetEase(Ease.OutElastic);
         }
-    }
-    public void SelectLeft()
-    {
-        if (i >= 2)
+
+        if (internalCooldown > 0)
         {
-            i = 0;
+            internalCooldown -= Time.deltaTime;
+            cantChange = true;
         }
         else
         {
+            cantChange = false;
 
+            /*if (transform.position != storedTransformPos)
+            {
+                transform.DOMove(storedTransformPos, .5f);
+            }*/
+
+            if (new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z) != storedTransformRot)
+            {
+                transform.DORotate(storedTransformRot, .5f);
+            }
+        }
+    }
+    public void SelectLeft()
+    {
+        if (!blocked && !cantChange)
+        {
+            internalCooldown = cooldown;
             switch (weaponType)
             {
                 case Type.Pickaxe:
-                    if (knife.blocked)
-                    {
-                        transform.DOShakePosition(1);
-                        transform.DOShakeRotation(1);
-                    }
-                    else
-                    {
-                        i++;
-                    }
+                    PickaxeType(false);
                     break;
                 case Type.Knife:
-                    if (bomb.blocked)
-                    {
-                        transform.DOShakePosition(1);
-                        transform.DOShakeRotation(1);
-                    }
-                    else
-                    {
-                        i++;
-                    }
+                    KnifeType(false);
                     break;
                 case Type.Bomb:
-                    if (pickaxe.blocked)
-                    {
-                        transform.DOShakePosition(1);
-                        transform.DOShakeRotation(1);
-                    }
-                    else
-                    {
-                        i++;
-                    }
+                    BombType(false);
                     break;
                 default:
                     break;
@@ -80,52 +107,184 @@ public class IndividualPos : MonoBehaviour
     }
     public void SelectRight()
     {
-        if (i <= 0)
+        if (!blocked && !cantChange)
         {
-            i = 2;
-        }
-        else
-        {
-            
-
+            internalCooldown = cooldown;
             switch (weaponType)
             {
                 case Type.Pickaxe:
-                    if (knife.blocked)
-                    {
-                        transform.DOShakePosition(1);
-                        transform.DOShakeRotation(1);
-                    }
-                    else
-                    {
-                        i--;
-                    }
+                    PickaxeType(true);
                     break;
                 case Type.Knife:
-                    if (bomb.blocked)
-                    {
-                        transform.DOShakePosition(1);
-                        transform.DOShakeRotation(1);
-                    }
-                    else
-                    {
-                        i--;
-                    }
+                    KnifeType(true);
                     break;
                 case Type.Bomb:
-                    if (pickaxe.blocked)
-                    {
-                        transform.DOShakePosition(1);
-                        transform.DOShakeRotation(1);
-                    }
-                    else
-                    {
-                        i--;
-                    }
+                    BombType(true);
                     break;
                 default:
                     break;
             }
+        }
+    }
+    void Select(bool b)
+    {
+        if (b)
+        {
+            if (i >= 2)
+            {
+                i = 0;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        else
+        {
+            if (i <= 0)
+            {
+                i = 2;
+            }
+            else
+            {
+                i--;
+            }
+        }
+    }
+    void PickaxeType(bool b)
+    {
+        if (bomb.blocked && knife.blocked)
+        {
+            transform.DOShakePosition(.5f);
+            transform.DOShakeRotation(.5f);
+        }
+        else if (!bomb.blocked && knife.blocked)
+        {
+            
+            if (i == bomb.index)
+            {
+                i = index;
+            }
+            else
+            {
+                i = bomb.index;
+            }
+        }
+        else if (bomb.blocked && !knife.blocked)
+        {
+            if (i == knife.index)
+            {
+                i = index;
+            }
+            else
+            {
+                i = knife.index;
+            }
+        }
+        else
+        {
+            if (b)
+            {
+                Select(true);
+            }
+            else
+            {
+                Select(false);
+            }
+        }
+    }
+    void KnifeType(bool b)
+    {
+        if (bomb.blocked && pickaxe.blocked)
+        {
+            transform.DOShakePosition(.5f);
+            transform.DOShakeRotation(.5f);
+        }
+        else if (!bomb.blocked && pickaxe.blocked)
+        {
+            if (i == bomb.index)
+            {
+                i = index;
+            }
+            else
+            {
+                i = bomb.index;
+            }
+        }
+        else if (bomb.blocked && !pickaxe.blocked)
+        {
+            if (i == pickaxe.index)
+            {
+                i = index;
+            }
+            else
+            {
+                i = pickaxe.index;
+            }
+        }
+        else
+        {
+            if (b)
+            {
+                Select(true);
+            }
+            else
+            {
+                Select(false);
+            }
+        }
+    }
+    void BombType(bool b)
+    {
+        if (bomb.blocked && knife.blocked)
+        {
+            transform.DOShakePosition(.5f);
+            transform.DOShakeRotation(.5f);
+        }
+        else if (!pickaxe.blocked && knife.blocked)
+        {
+            if (i == pickaxe.index)
+            {
+                i = index;
+            }
+            else
+            {
+                i = pickaxe.index;
+            }
+        }
+        else if (pickaxe.blocked && !knife.blocked)
+        {
+            if (i == knife.index)
+            {
+                i = index;
+            }
+            else
+            {
+                i = knife.index;
+            }
+        }
+        else
+        {
+            if (b)
+            {
+                Select(true);
+            }
+            else
+            {
+                Select(false);
+            }
+        }
+    }
+
+    public void LockUnlock(bool b)
+    {
+        if (b)
+        {
+            blocked = true;
+        }
+        else
+        {
+            blocked = false;
         }
     }
 }

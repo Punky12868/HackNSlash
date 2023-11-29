@@ -8,6 +8,11 @@ public class PopOutSpecialAttack : PopUpCore
     bool canSpecial;
     protected override void OnAwake()
     {
+        onAwake = PopUpSpawner.onAwakeStatic[3];
+        onCompleted = PopUpSpawner.onCompletedStatic[3];
+
+        onAwake.Invoke();
+
         powerSlider = GameObject.FindGameObjectWithTag("PowerSlider").GetComponent<UnityEngine.UI.Slider>();
     }
     protected override void PoppingOutCondition()

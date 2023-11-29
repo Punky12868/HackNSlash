@@ -96,8 +96,14 @@ MonoBehaviour:
   popOutTime: 1
   popingOut: 0
   usingSlider: 1
-  timeBeforeTakingInput: 1.5
+  timeBeforeTakingInput: 1
   timeValue: {fileID: 0}
+  onAwake:
+    m_PersistentCalls:
+      m_Calls: []
+  onCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5424485937838695419
 GameObject:
   m_ObjectHideFlags: 0
