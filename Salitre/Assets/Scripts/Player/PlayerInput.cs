@@ -29,6 +29,7 @@ public class PlayerInput : MonoBehaviour
     bool canDash;
 
     float maxVelocity;
+    int i;
     private void Awake()
     {
         canDash = true;
@@ -43,9 +44,18 @@ public class PlayerInput : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         dashStoredMoveDir = dashOrientation.forward;
+
+        rb.constraints = RigidbodyConstraints.FreezeAll;
     }
     private void Update()
     {
+        if (rb.freezeRotation && i == 0)
+        {
+            i++;
+            rb.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        } 
+
         h = player.GetAxisRaw("Move Horizontal");
         v = player.GetAxisRaw("Move Vertical");
 

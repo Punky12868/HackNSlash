@@ -9,6 +9,8 @@ public class IndividualPos : MonoBehaviour
     public enum Type {Pickaxe, Knife, Bomb}
     public Type weaponType;
 
+    [SerializeField] int damage;
+
     [SerializeField] IndividualPos pickaxe, knife, bomb;
 
     [SerializeField] float travelTime;
@@ -27,6 +29,24 @@ public class IndividualPos : MonoBehaviour
         index = i;
         storedTransformPos = transform.position;
         storedTransformRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+
+        switch (weaponType)
+        {
+            case Type.Pickaxe:
+                Weapon.pickaxe = this;
+                Weapon.pickDamage = damage;
+                break;
+            case Type.Knife:
+                Weapon.knife = this;
+                Weapon.knifeDamage = damage;
+                break;
+            case Type.Bomb:
+                Weapon.bomb = this;
+                Weapon.bombDamage = damage;
+                break;
+            default:
+                break;
+        }
     }
     private void Update()
     {

@@ -54,4 +54,15 @@ public class DoorController : MonoBehaviour
     {
         tpPoint.gameObject.GetComponentInParent<Rooms>().ActivateDialog();
     }
+    public void OpenCloseDoor(bool b)
+    {
+        if (!b)
+        {
+            canEnter = false;
+        }
+        else
+        {
+            canEnter = true;
+        }
+    }
 }

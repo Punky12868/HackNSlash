@@ -44,6 +44,7 @@ MonoBehaviour:
     - Friedforfun.ContextSteering.Tests
     - Friedforfun.ContextSteering.Tests.TestUtils
     - Friedforfun.ContextSteering.Utilities
+    - OccaSoftware.Buto
     - Rewired_Windows_Functions
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
