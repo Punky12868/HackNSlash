@@ -8,22 +8,24 @@ public class DoorController : MonoBehaviour
     [SerializeField] Material debugCanEnter;
     [SerializeField] Material debugCannotEnter;
 
-    [HideInInspector] public Transform tpPoint;
+    public Transform tpPoint;
     [SerializeField] Transform assignedDoor;
-    [HideInInspector] public bool canEnter;
+    public bool canEnter;
+    public bool nextLevel;
 
     public UnityEvent OnEnter;
     private void Awake()
     {
-        if (assignedDoor == null || !canEnter)
+        if (assignedDoor != null)
+        {
+            tpPoint = assignedDoor.GetChild(0);
+        }
+        else if (assignedDoor == null || !canEnter)
         {
             canEnter = false;
             GetComponent<Renderer>().material.color = debugCannotEnter.color;
         }
-        else if (assignedDoor != null)
-        {
-            tpPoint = assignedDoor.GetChild(0);
-        }
+        
     }
     private void Update()
     {
@@ -52,5 +54,16 @@ public class DoorController : MonoBehaviour
     public void CheckIfNpcRoom()
     {
         tpPoint.gameObject.GetComponentInParent<Rooms>().ActivateDialog();
+    }
+    public void OpenCloseDoor(bool b)
+    {
+        if (!b)
+        {
+            canEnter = false;
+        }
+        else
+        {
+            canEnter = true;
+        }
     }
 }

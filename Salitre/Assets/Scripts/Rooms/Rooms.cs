@@ -1,24 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Events;
 using UnityEngine;
 using EmeraldAI;
 
 public class Rooms : MonoBehaviour
 {
-    EmeraldAISystem[] allEnemys;
+    EmeraldAISystem[] enemys;
+    DoorController[] doors;
 
     public bool activeRoom;
     public bool npcRoom;
 
     [SerializeField] GameObject[] allGo;
-
-    [HideInInspector] public int enemysAlive;
-
-    int i;
+    [HideInInspector] public int i;
+    bool killedAllEnemies;
     private void Awake()
     {
-        allEnemys = GetComponentsInChildren<EmeraldAISystem>();
+        doors = GetComponentsInChildren<DoorController>();
+
+        if (!npcRoom)
+        {
+            enemys = GetComponentsInChildren<EmeraldAISystem>();
+
+            if (enemys.Length > 0)
+            {
+                i = enemys.Length;
+
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].canEnter = false;
+                }
+            }
+        }
 
         if (activeRoom)
         {
@@ -29,35 +42,8 @@ public class Rooms : MonoBehaviour
             DeactivateRoom();
         }
     }
-    private void Update()
-    {
-        if (enemysAlive > 0 && i == 0)
-        {
-            i++;
-
-            DoorController[] allRoomDoors = GetComponentsInChildren<DoorController>();
-
-            for (int i = 0; i < allRoomDoors.Length; i++)
-            {
-                allRoomDoors[i].canEnter = false;
-            }
-        }
-        else if (enemysAlive <= 0 && i == 1)
-        {
-            i++;
-
-            DoorController[] allRoomDoors = GetComponentsInChildren<DoorController>();
-
-            for (int i = 0; i < allRoomDoors.Length; i++)
-            {
-                allRoomDoors[i].canEnter = true;
-            }
-        }
-    }
     public void ActivateRoom()
     {
-        activeRoom = true;
-
         for (int i = 0; i < allGo.Length; i++)
         {
             allGo[i].SetActive(true);
@@ -65,8 +51,6 @@ public class Rooms : MonoBehaviour
     }
     public void DeactivateRoom()
     {
-        activeRoom = false;
-
         for (int i = 0; i < allGo.Length; i++)
         {
             allGo[i].SetActive(false);
@@ -77,6 +61,18 @@ public class Rooms : MonoBehaviour
         if (npcRoom)
         {
             GetComponentInChildren<DialogSystem>().ActivateDialog();
+        }
+    }
+    public void CheckOpenDoor()
+    {
+        if (i == 0 && !killedAllEnemies)
+        {
+            killedAllEnemies = true;
+
+            for (int i = 0; i < doors.Length; i++)
+            {
+                doors[i].canEnter = true;
+            }
         }
     }
 }

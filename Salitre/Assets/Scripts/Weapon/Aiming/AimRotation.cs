@@ -12,37 +12,18 @@ public class AimRotation : MonoBehaviour
 
     [SerializeField] float rotationSpeed;
 
-    private bool isMouseInput = true;
-    private bool isControllerActive = false;
     private void Awake()
     {
         player = ReInput.players.GetPlayer(0);
     }
     private void Update()
     {
-        float horiz = player.GetAxisRaw("Move Weapon H");
-        float vert = player.GetAxisRaw("Move Weapon V");
-
-        bool isControllerInput = Mathf.Abs(horiz) > 0.01f || Mathf.Abs(vert) > 0.01f;
-
-        if (isControllerInput && !isControllerActive)
-        {
-            isMouseInput = false;
-            isControllerActive = true;
-        }
-
-        if (!isControllerInput && isControllerActive)
-        {
-            if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
-            {
-                isMouseInput = true;
-                isControllerActive = false;
-            }
-        }
+        float horiz = player.GetAxisRaw("Move Horizontal");
+        float vert = player.GetAxisRaw("Move Vertical");
 
         if (WeaponCombo.canAim)
         {
-            if (isMouseInput)
+            if (GetCurrentInput.isMouseInput)
             {
                 RotateTowardsMouse();
             }

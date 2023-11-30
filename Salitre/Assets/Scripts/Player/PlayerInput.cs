@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] Transform orientation;
 
     [HideInInspector] public Vector3 moveDir;
+    Vector3 dashStoredMoveDir;
     Rigidbody rb;
     float h, v;
 
@@ -24,10 +25,11 @@ public class PlayerInput : MonoBehaviour
     public float dashCooldown;
     float dashCooldownStored;
 
-    [HideInInspector] public bool dashing;
+    public static bool dashing;
     bool canDash;
 
     float maxVelocity;
+    int i;
     private void Awake()
     {
         canDash = true;
@@ -40,26 +42,43 @@ public class PlayerInput : MonoBehaviour
 
         playerRenderer.name = gameObject.name + " Renderer";
         rb = GetComponent<Rigidbody>();
+
+        dashStoredMoveDir = dashOrientation.forward;
+
+        rb.constraints = RigidbodyConstraints.FreezeAll;
     }
     private void Update()
     {
+        if (rb.freezeRotation && i == 0)
+        {
+            i++;
+            rb.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        } 
+
         h = player.GetAxisRaw("Move Horizontal");
         v = player.GetAxisRaw("Move Vertical");
 
         playerRenderer.transform.position = new Vector3(transform.position.x, transform.position.y - heightOffset, transform.position.z);
 
-        if (player.GetButtonDown("Dash") && dashCooldown == 0)
+        if (moveDir != Vector3.zero)
+        {
+            dashStoredMoveDir = new Vector3(moveDir.normalized.x, 0, moveDir.normalized.z);
+        }
+
+        if (player.GetButtonDown("Dash") && dashCooldown == 0 && WeaponCombo.canMove)
         {
             Dash();
         }
     }
     private void FixedUpdate()
     {
+        moveDir = orientation.forward * v + orientation.right * h;
+
         if (WeaponCombo.canMove)
         {
             if (!dashing)
             {
-                moveDir = orientation.forward * v + orientation.right * h;
                 rb.AddForce(moveDir.normalized * speed * 10, ForceMode.Force);
 
                 if (rb.velocity.magnitude > maxVelocity)
@@ -71,10 +90,9 @@ public class PlayerInput : MonoBehaviour
 
         if (canDash)
         {
-            Vector3 dashDir = dashOrientation.forward;
+            Vector3 dashDir = dashStoredMoveDir;
             rb.AddForce(dashDir.normalized * dashSpeed * 10, ForceMode.Impulse);
 
-            
             canDash = false;
         }
 

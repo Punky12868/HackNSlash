@@ -75,7 +75,7 @@ MonoBehaviour:
       customTexture: {fileID: 0}
   - guid: a226b70cc8834e7478e0420349bd082b
     textureData:
-      color: {r: 0.25262952, g: 1, b: 0, a: 0}
+      color: {r: 0.39215687, g: 1, b: 0.9764706, a: 0}
       emptyFolderTexture: {fileID: 2800000, guid: 6ca7f2ac8950e5f49b7a4b236eb3316f, type: 3}
       folderTexture: {fileID: 2800000, guid: dc7ac02ecb4018e4ea644b3acee2d873, type: 3}
       customTexture: {fileID: 0}
