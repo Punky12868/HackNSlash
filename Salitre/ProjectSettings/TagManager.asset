@@ -16,6 +16,8 @@ TagManager:
   - FadeSpawner
   - PowerSlider
   - PopUp
+  - Ground
+  - ExplosionRadius
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Obstacle
   - Occluder
   - Volume
-  - 
+  - Ground
   - 
   - 
   - 

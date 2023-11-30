@@ -11,6 +11,7 @@ public class DoorController : MonoBehaviour
     public Transform tpPoint;
     [SerializeField] Transform assignedDoor;
     public bool canEnter;
+    public bool nextLevel;
 
     public UnityEvent OnEnter;
     private void Awake()
