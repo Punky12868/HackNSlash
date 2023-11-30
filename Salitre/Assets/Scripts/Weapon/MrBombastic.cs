@@ -140,7 +140,7 @@ public class MrBombastic : MonoBehaviour
         }
 
         return points;
-    }*/
+    }
 
     private Vector3[] CalculateTrajectoryPoints(Vector3 start, Vector3 end, int pointsCount)
     {
@@ -151,6 +151,28 @@ public class MrBombastic : MonoBehaviour
             float t = i / (float)(pointsCount - 1);
 
             // Ajusta la curva para hacerla más suave y redonda
+            float height = Mathf.Lerp(start.y, end.y, t) + trajectoryHeight * Mathf.Sin(t * Mathf.PI * roundnessFactor);
+
+            float distance = Mathf.Lerp(0, Vector3.Distance(start, end), t);
+            Vector3 point = start + distance * (end - start).normalized + Vector3.up * height;
+
+            points[i] = point;
+        }
+
+        return points;
+    }*/
+
+    private Vector3[] CalculateTrajectoryPoints(Vector3 start, Vector3 end, int pointsCount)
+    {
+        Vector3[] points = new Vector3[pointsCount];
+
+        for (int i = 0; i < pointsCount; i++)
+        {
+            float t = i / (float)(pointsCount - 1);
+
+            // Aplica una función cuadrática para ajustar t
+            t = Mathf.Pow(t, 2f) / (Mathf.Pow(t, 2f) + Mathf.Pow(1f - t, 2f));
+
             float height = Mathf.Lerp(start.y, end.y, t) + trajectoryHeight * Mathf.Sin(t * Mathf.PI * roundnessFactor);
 
             float distance = Mathf.Lerp(0, Vector3.Distance(start, end), t);
@@ -190,6 +212,7 @@ public class MrBombastic : MonoBehaviour
             //DestroyExplosionRadius();
             Instantiate(explosionRadiusPrefab, position, Quaternion.identity);
             existingExplosionRadius = GameObject.FindWithTag("ExplosionRadius");
+            existingExplosionRadius.transform.localScale = new Vector3(explosionRadius, 0.1f, explosionRadius);
         }
         else
         {

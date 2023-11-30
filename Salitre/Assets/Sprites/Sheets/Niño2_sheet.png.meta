@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_0"
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 521
+        width: 588
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1752b6427b8294890c962f9407c12d
+      internalID: 664597784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_1"
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 707
+        width: 210
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f2051557619e7438de227139712300
+      internalID: -507801389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_2"
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 646
+        width: 195
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c031bd210bc8d44895e6b3758f72b8
+      internalID: 1123715874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_3"
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 340
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd8a1a1dc9821942a77198e6817167e
+      internalID: 209142842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 317
+        width: 123
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8c20a065525b145988a17b89cb4e3b
+      internalID: 489872886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_5"
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 363
+        width: 165
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdd7da4e292996438a6f8d892ccd5ae
+      internalID: 1331782896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_6"
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 321
+        width: 141
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd440a9e97365247b14596e93e163f5
+      internalID: 1161312625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_7"
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 118
+        width: 143
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8576356b43f6434e8cb3d130a143634
+      internalID: -1989544097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_8"
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 242
+        width: 123
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af34d5c32840d84da811b7ed8b5b4ef
+      internalID: 179873477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_9"
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 104
+        width: 215
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a44c2ec8189bf4092726064c1faf3b
+      internalID: 1620359823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_10"
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 88
+        width: 241
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f61382834e4d9046b70eb8380b2539f
+      internalID: 377670373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_11"
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 119
+        width: 120
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b63e76d8fbd9f47ac083b7ac20e27c
+      internalID: -949455879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ni\xF1o2_sheet_12"
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 269
+        width: 155
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5403788bc19e7544492233a845e7199f
+      internalID: 2024493917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +387,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Ni\xF1o2_sheet_0": 664597784
+      "Ni\xF1o2_sheet_1": -507801389
+      "Ni\xF1o2_sheet_10": 377670373
+      "Ni\xF1o2_sheet_11": -949455879
+      "Ni\xF1o2_sheet_12": 2024493917
+      "Ni\xF1o2_sheet_2": 1123715874
+      "Ni\xF1o2_sheet_3": 209142842
+      "Ni\xF1o2_sheet_4": 489872886
+      "Ni\xF1o2_sheet_5": 1331782896
+      "Ni\xF1o2_sheet_6": 1161312625
+      "Ni\xF1o2_sheet_7": -1989544097
+      "Ni\xF1o2_sheet_8": 179873477
+      "Ni\xF1o2_sheet_9": 1620359823
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
