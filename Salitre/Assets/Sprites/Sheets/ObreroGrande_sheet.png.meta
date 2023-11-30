@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 788
+        width: 390
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772811de55685e143a53819544dcbd2b
+      internalID: -912837275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 720
+        width: 555
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5ed441fcb05ed4faee91ba69fea5d0
+      internalID: -1942363290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 943
+        width: 357
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c472dedc23b215f409dff3285c2c2152
+      internalID: -133391861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 519
+        width: 241
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750e3b74c004b97429e06f948bc19fd9
+      internalID: 1635321005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 523
+        width: 112
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b721e16dd3cead9469324d4d64938f21
+      internalID: -1166761510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 526
+        width: 143
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda6eece3af37ce408e664c57978c30d
+      internalID: 123079399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 570
+        width: 151
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3a341dece012346960354a6ab4e6d1
+      internalID: 2105676736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 410
+        width: 300
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61472fe71f6c7e94598f29f1f3efcd92
+      internalID: -1796248703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 32
+        width: 245
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0f437dcea9edd45a5d3c33a605265a
+      internalID: 566387498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 252
+        width: 414
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e869164eb75b44f8e6efc72c3e0751
+      internalID: 1411393716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 164
+        width: 102
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb353895b6b23e64686fc29eb525ba9b
+      internalID: -1394505283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroGrande_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 157
+        width: 102
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d87adec31727404da6b3bc1299e273e
+      internalID: 299182480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +366,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ObreroGrande_sheet_0: -912837275
+      ObreroGrande_sheet_1: -1942363290
+      ObreroGrande_sheet_10: -1394505283
+      ObreroGrande_sheet_11: 299182480
+      ObreroGrande_sheet_2: -133391861
+      ObreroGrande_sheet_3: 1635321005
+      ObreroGrande_sheet_4: -1166761510
+      ObreroGrande_sheet_5: 123079399
+      ObreroGrande_sheet_6: 2105676736
+      ObreroGrande_sheet_7: -1796248703
+      ObreroGrande_sheet_8: 566387498
+      ObreroGrande_sheet_9: 1411393716
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

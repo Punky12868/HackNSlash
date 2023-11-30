@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 603
+        width: 518
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef353ec046d101745864da7ecde4d05f
+      internalID: 992340687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 929
+        width: 127
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13ea82cc337d82448fdcb8e184b4626
+      internalID: 1970152555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 600
+        width: 343
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8f628d4f94adf41b18d56f721071e4
+      internalID: -563196697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 151
+        width: 362
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca8e2ae969f619468fc7891ecfdb3a8
+      internalID: -1616184092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 420
+        width: 157
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911fd6c30169e0b42b76ad1a31785f62
+      internalID: -1273558252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 118
+        width: 141
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32a20d54f8e50b4ab82b9062273657c
+      internalID: 1968678130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 235
+        width: 169
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76b42bc11b949744aa023741178f47a
+      internalID: 1585421837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 105
+        width: 113
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9cf8ea6fb9c0e49a07822322641460
+      internalID: 551119429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 101
+        width: 112
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b265666e323424fb7edc7bab9c11f6
+      internalID: 221620422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObreroBasic2_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 123
+        width: 215
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50b5c9f66932ef4cbe7a3387df66c47
+      internalID: 1748873076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +324,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ObreroBasic2_sheet_0: 992340687
+      ObreroBasic2_sheet_1: 1970152555
+      ObreroBasic2_sheet_2: -563196697
+      ObreroBasic2_sheet_3: -1616184092
+      ObreroBasic2_sheet_4: -1273558252
+      ObreroBasic2_sheet_5: 1968678130
+      ObreroBasic2_sheet_6: 1585421837
+      ObreroBasic2_sheet_7: 551119429
+      ObreroBasic2_sheet_8: 221620422
+      ObreroBasic2_sheet_9: 1748873076
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
