@@ -58,13 +58,13 @@ public class MrBombastic : MonoBehaviour
 
     private void StartAiming()
     {
-        startPosition = transform.position;
         trajectoryLineRenderer.positionCount = numberOfPoints;
         isAiming = true;
     }
 
     private void Aim()
     {
+        startPosition = transform.position;
         Vector3 mousePosition = GetMouseWorldPosition();
         Vector3 direction = mousePosition - startPosition;
         direction = Vector3.ClampMagnitude(direction, maxThrowDistance);
