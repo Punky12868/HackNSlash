@@ -21,13 +21,6 @@ public class PopOutMovement : PopUpCore
         {
             movingTime += Time.deltaTime;
         }
-        else
-        {
-            if (movingTime > 0)
-            {
-                movingTime -= Time.deltaTime;
-            }
-        }
 
         if (movingTime > 2)
         {
