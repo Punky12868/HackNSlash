@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Militar2_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 875
+        width: 373
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3020267d37818e40afc154f84534734
+      internalID: -1351307407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 934
+        width: 433
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6087acceb7129da419b6434ae4fbe208
+      internalID: -335224210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 730
+        width: 271
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4402110343d65784281d26dff553b5af
+      internalID: -356601979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 489
+        width: 545
+        height: 711
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e41a64bbeab03498498e49dd89cd2d
+      internalID: -1935501404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 758
+        width: 229
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74575aecdd0ff0e4c9e67461d88ab9b8
+      internalID: -428256537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 404
+        width: 274
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c0f041a5337c445a3d7005f8ff8dbc
+      internalID: 745855062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 290
+        width: 130
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93deeca7901d2f647b0db36fad3f2b1f
+      internalID: -844356075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 289
+        width: 130
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c9c5ece0c06354688494ea6a5dc737
+      internalID: -1348476313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 390
+        width: 149
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4379b57c82a48e4ca2d48bd14067a95
+      internalID: 1937717134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 285
+        width: 149
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12ce4ab58f78ac468851ee05acddbff
+      internalID: 1985376914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 591
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8a386048561c740be8e442e533eae4
+      internalID: -677442591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Militar2_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 443
+        width: 172
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e9f1ec43c32244b9aa300025300a3f
+      internalID: -1055529947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +366,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Militar2_sheet_0: -1351307407
+      Militar2_sheet_1: -335224210
+      Militar2_sheet_10: 608679267
+      Militar2_sheet_11: 1985376914
+      Militar2_sheet_12: -1633314841
+      Militar2_sheet_13: -677442591
+      Militar2_sheet_14: -1055529947
+      Militar2_sheet_2: -356601979
+      Militar2_sheet_3: -1935501404
+      Militar2_sheet_4: -428256537
+      Militar2_sheet_5: 745855062
+      Militar2_sheet_6: -844356075
+      Militar2_sheet_7: -1348476313
+      Militar2_sheet_8: 1937717134
+      Militar2_sheet_9: -398795581
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

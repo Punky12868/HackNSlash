@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 541
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e4e95520560a24884e8158ba167c9f
+      internalID: 807633197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 642
+        width: 321
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af978c82eac63a04bb941ff02d9919a6
+      internalID: -1458916679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 724
+        width: 146
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe3e70344fa026428f35962aeaa7521
+      internalID: 384221769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 725
+        width: 135
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e37aa3e16c9464d9a7b5d371952214
+      internalID: 1209475608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 296
+        width: 196
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a036f08fd0f8c54da23ebf637623996
+      internalID: -80481539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 289
+        width: 271
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11bea1a2b6dc4ee4b98d13a4ee389990
+      internalID: -1897148529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 482
+        width: 99
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160cea7da7d9dd142be4ab892e819391
+      internalID: 1902225959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 485
+        width: 105
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bc3ec5781c1f64d9aac2469bc55c86
+      internalID: -1548398743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 10
+        width: 196
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda7571fd58ef2f47ad7168b6b3fbb1d
+      internalID: -1903912337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 44
+        width: 227
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe45e483fccc46479f7d853ba90c2b3
+      internalID: -1436760455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CondorFinal_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 33
+        width: 208
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bb69d6e56d09d4bb1d258ca978ae21
+      internalID: -2000881389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +345,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CondorFinal_Sheet_0: 807633197
+      CondorFinal_Sheet_1: -1458916679
+      CondorFinal_Sheet_10: -2000881389
+      CondorFinal_Sheet_2: 384221769
+      CondorFinal_Sheet_3: 1209475608
+      CondorFinal_Sheet_4: -80481539
+      CondorFinal_Sheet_5: -1897148529
+      CondorFinal_Sheet_6: 1902225959
+      CondorFinal_Sheet_7: -1548398743
+      CondorFinal_Sheet_8: -1903912337
+      CondorFinal_Sheet_9: -1436760455
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
