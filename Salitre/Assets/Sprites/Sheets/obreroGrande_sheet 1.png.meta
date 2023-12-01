@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ede63dc16eb09b440841a296cb78c0ad
+guid: 8f0b65d1c115d1746953a682b923f978
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,265 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_0"
+      name: obreroGrande_sheet 1_0
       rect:
         serializedVersion: 2
-        x: 242
-        y: 521
-        width: 588
-        height: 480
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b1752b6427b8294890c962f9407c12d
-      internalID: 664597784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_1"
-      rect:
-        serializedVersion: 2
-        x: 838
-        y: 707
-        width: 210
-        height: 276
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26f2051557619e7438de227139712300
-      internalID: -507801389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_2"
-      rect:
-        serializedVersion: 2
-        x: 1054
-        y: 646
-        width: 195
-        height: 326
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9c031bd210bc8d44895e6b3758f72b8
-      internalID: 1123715874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_3"
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 340
-        width: 151
-        height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fd8a1a1dc9821942a77198e6817167e
-      internalID: 209142842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_4"
-      rect:
-        serializedVersion: 2
-        x: 571
-        y: 317
-        width: 123
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc8c20a065525b145988a17b89cb4e3b
-      internalID: 489872886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_5"
-      rect:
-        serializedVersion: 2
-        x: 839
-        y: 363
-        width: 165
-        height: 212
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bdd7da4e292996438a6f8d892ccd5ae
-      internalID: 1331782896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_6"
-      rect:
-        serializedVersion: 2
-        x: 1069
-        y: 321
-        width: 141
-        height: 314
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dd440a9e97365247b14596e93e163f5
-      internalID: 1161312625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_7"
-      rect:
-        serializedVersion: 2
-        x: 291
-        y: 118
-        width: 143
-        height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8576356b43f6434e8cb3d130a143634
-      internalID: -1989544097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_8"
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 242
-        width: 123
-        height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2af34d5c32840d84da811b7ed8b5b4ef
-      internalID: 179873477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_9"
-      rect:
-        serializedVersion: 2
-        x: 503
-        y: 104
-        width: 215
-        height: 135
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8a44c2ec8189bf4092726064c1faf3b
-      internalID: 1620359823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_10"
-      rect:
-        serializedVersion: 2
-        x: 795
-        y: 88
-        width: 241
-        height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f61382834e4d9046b70eb8380b2539f
-      internalID: 377670373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_11"
-      rect:
-        serializedVersion: 2
-        x: 1097
-        y: 119
-        width: 120
-        height: 171
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90b63e76d8fbd9f47ac083b7ac20e27c
-      internalID: -949455879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Ni\xF1o2_sheet_12"
-      rect:
-        serializedVersion: 2
-        x: 841
-        y: 269
-        width: 155
-        height: 82
+        x: 49
+        y: 837
+        width: 416
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,8 +119,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5403788bc19e7544492233a845e7199f
-      internalID: 2024493917
+      spriteID: 45c337d944764444390efb6445686d31
+      internalID: -1848569181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1025
+        width: 357
+        height: 244
+      alignment: 9
+      pivot: {x: 0.21449156, y: 0.84612036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f472ea702bc0b49bde172fcd49e04a
+      internalID: 129283377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 530
+        width: 281
+        height: 270
+      alignment: 9
+      pivot: {x: 0.8316368, y: 0.8613265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7b7f25b06f0ae4788a7b02e3790640
+      internalID: 784681526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 391
+        width: 596
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1a3f8f0c724d047b671c13ef666da4
+      internalID: -510620619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 277
+        width: 342
+        height: 552
+      alignment: 9
+      pivot: {x: 0.4744541, y: 0.95371026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd8db0e7c2b1ea40932f4c7ca3e659a
+      internalID: 1014470325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 286
+        height: 497
+      alignment: 9
+      pivot: {x: 0.7800178, y: 0.94239455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733e5c4df1a121f4bb0151a00dcbc58e
+      internalID: 700594083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 70
+        width: 189
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f398e3eec0d25f40bf62ea919ea7cc5
+      internalID: -1534897755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 34
+        width: 142
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5102539, y: 0.8827443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addacd65811b3e948878c4dea9454452
+      internalID: -1704388328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obreroGrande_sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 38
+        width: 143
+        height: 175
+      alignment: 9
+      pivot: {x: 0.4898161, y: 0.86610323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe054b3a0ce3a04da693bd1ca3a9f61
+      internalID: 1682678833
       vertices: []
       indices: 
       edges: []
@@ -380,7 +296,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 0c3d97800f07c054eb3060a4a6b4771b
     internalID: 0
     vertices: []
     indices: 
@@ -388,19 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "Ni\xF1o2_sheet_0": 664597784
-      "Ni\xF1o2_sheet_1": -507801389
-      "Ni\xF1o2_sheet_10": 377670373
-      "Ni\xF1o2_sheet_11": -949455879
-      "Ni\xF1o2_sheet_12": 2024493917
-      "Ni\xF1o2_sheet_2": 1123715874
-      "Ni\xF1o2_sheet_3": 209142842
-      "Ni\xF1o2_sheet_4": 489872886
-      "Ni\xF1o2_sheet_5": 1331782896
-      "Ni\xF1o2_sheet_6": 1161312625
-      "Ni\xF1o2_sheet_7": -1989544097
-      "Ni\xF1o2_sheet_8": 179873477
-      "Ni\xF1o2_sheet_9": 1620359823
+      obreroGrande_sheet 1_0: -1848569181
+      obreroGrande_sheet 1_1: 129283377
+      obreroGrande_sheet 1_2: 784681526
+      obreroGrande_sheet 1_3: -510620619
+      obreroGrande_sheet 1_4: 1014470325
+      obreroGrande_sheet 1_5: 700594083
+      obreroGrande_sheet 1_6: -1534897755
+      obreroGrande_sheet 1_7: -1704388328
+      obreroGrande_sheet 1_8: 1682678833
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
