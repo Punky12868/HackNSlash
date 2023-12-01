@@ -10,6 +10,8 @@ public class SpawnFade : MonoBehaviour
 
     [SerializeField] GameObject[] fades;
     public UnityEvent onFadeInSpawn, onFadeInEnd, onFadeOutSpawn, onMidFadeOut, onFadeOutEnd, onLoadingScreenSpawn, onLoadingScreenEnd, onDoorFadeInSpawn, onDoorFadeInEnd;
+    public static bool flashback;
+    public static bool nextLevelNoFlashback;
     public void SpawnBasicFadeIn()
     {
         Instantiate(fades[0], transform);
