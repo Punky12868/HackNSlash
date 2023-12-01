@@ -12,6 +12,9 @@ public class DoorController : MonoBehaviour
     [SerializeField] Transform assignedDoor;
     public bool canEnter;
     public bool nextLevel;
+    public int levelID;
+
+    public bool flashback;
 
     public UnityEvent OnEnter;
     private void Awake()
@@ -43,6 +46,15 @@ public class DoorController : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && canEnter)
         {
             FindObjectOfType<AllRooms>().currentDoor = this;
+
+            if (nextLevel && !flashback)
+            {
+                SpawnFade.nextLevelNoFlashback = true;
+            }
+            else if (nextLevel && flashback)
+            {
+                SpawnFade.flashback = true;
+            }
             OnEnter.Invoke();
         }
     }
