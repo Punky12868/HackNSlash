@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.VFX;
 using UnityEngine;
 using Rewired;
 
 public class WeaponCombo : MonoBehaviour
 {
+    [SerializeField] VisualEffect slash;
+
     [SerializeField] Weapon weapon;
     Player player;
 
@@ -64,6 +67,7 @@ public class WeaponCombo : MonoBehaviour
                     canMove = false;
                     canAim = false;
                     canAttack = false;
+                    slash.Play();
                     anim.SetTrigger("" + combo);
                     //GetComponent<SpawnHitbox>().Spawn(combo);
                 }
@@ -74,6 +78,7 @@ public class WeaponCombo : MonoBehaviour
                     canMove = false;
                     canAim = false;
                     canAttack = false;
+                    slash.Play();
                     anim.SetTrigger("" + specialAttackID);
                 }
             }
