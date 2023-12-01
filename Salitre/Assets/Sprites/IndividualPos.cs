@@ -37,7 +37,7 @@ public class IndividualPos : MonoBehaviour
                 Weapon.pickDamage = damage;
                 break;
             case Type.Knife:
-                Weapon.knife = this;
+                Weapon.knifea = this;
                 Weapon.knifeDamage = damage;
                 break;
             case Type.Bomb:
@@ -55,12 +55,12 @@ public class IndividualPos : MonoBehaviour
             if (index == 0)
             {
                 bomb.i = bomb.index;
-                knife.i = knife.index;
+                pickaxe.i = pickaxe.index;
             }
             else if (index == 1)
             {
                 bomb.i = bomb.index;
-                pickaxe.i = pickaxe.index;
+                knife.i = knife.index;
             }
             else if (index == 2)
             {
@@ -82,6 +82,15 @@ public class IndividualPos : MonoBehaviour
         else if (i == 2 && transform.position != SelectWeapon.bombPos)
         {
             transform.DOMove(SelectWeapon.bombPos, travelTime).SetEase(Ease.OutElastic);
+        }
+
+        if (i == 0 && transform.localScale.x < 1.25f)
+        {
+            transform.DOScale(1.25f, travelTime).SetEase(Ease.OutElastic);
+        }
+        else if (i != 0 && transform.localScale.x > 1)
+        {
+            transform.DOScale(1, travelTime).SetEase(Ease.OutElastic);
         }
 
         if (internalCooldown > 0)

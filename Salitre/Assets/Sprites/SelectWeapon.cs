@@ -15,16 +15,28 @@ public class SelectWeapon : MonoBehaviour
     public UnityEvent selectRight;
     public UnityEvent selectLeft;
 
+
     private void Awake()
     {
+        
+
         input = ReInput.players.GetPlayer(0);
 
-        pickaxePos = pickaxe.position;
         knifePos = knife.position;
+        pickaxePos = pickaxe.position;
         bombPos = bomb.position;
     }
     private void Update()
     {
+        /*if (i != 2 && mrBombastic.enabled)
+        {
+            mrBombastic.enabled = false;
+        }
+        else
+        {
+            mrBombastic.enabled = true;
+        }*/
+
         if (input.GetButtonDown("WeaponSelectRight"))
         {
             selectRight.Invoke();

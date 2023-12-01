@@ -18,6 +18,8 @@ TagManager:
   - PopUp
   - Ground
   - ExplosionRadius
+  - BombHitbox
+  - Bomb
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using Rewired;
 
 public class WeaponCombo : MonoBehaviour
 {
+    [SerializeField] Transform slashParent;
     [SerializeField] VisualEffect slash;
 
     [SerializeField] Weapon weapon;
@@ -33,6 +34,9 @@ public class WeaponCombo : MonoBehaviour
 
     UnityEngine.UI.Slider powerSlider;
     public static bool specialAttackOn;
+
+    [SerializeField] float attackCooldown;
+    float internalAttackCooldown;
     private void Start()
     {
         player = ReInput.players.GetPlayer(0);
@@ -49,12 +53,17 @@ public class WeaponCombo : MonoBehaviour
     }
     private void Update()
     {
+        if (internalAttackCooldown > 0)
+        {
+            internalAttackCooldown -= Time.deltaTime;
+        }
+
         if (powerSlider.value == powerSlider.maxValue && !specialAttackOn)
         {
             specialAttackOn = true;
         }
 
-        if (canAttack)
+        if (canAttack && internalAttackCooldown <= 0)
         {
             if (isPlayer && !PlayerInput.dashing)
             {
@@ -67,6 +76,21 @@ public class WeaponCombo : MonoBehaviour
                     canMove = false;
                     canAim = false;
                     canAttack = false;
+
+                    if (combo == 1)
+                    {
+                        slashParent.localRotation = Quaternion.Euler(slashParent.localRotation.x, slashParent.localRotation.y, 45);
+                    }
+                    else if (combo == 2)
+                    {
+                        slashParent.localRotation = Quaternion.Euler(slashParent.localRotation.x, slashParent.localRotation.y, -45);
+                    }
+                    else
+                    {
+                        slashParent.localRotation = Quaternion.Euler(slashParent.localRotation.x, slashParent.localRotation.y, 0);
+
+                    }
+
                     slash.Play();
                     anim.SetTrigger("" + combo);
                     //GetComponent<SpawnHitbox>().Spawn(combo);
@@ -108,9 +132,15 @@ public class WeaponCombo : MonoBehaviour
     }
     public void FinishCombo()
     {
+        internalAttackCooldown = attackCooldown;
         combo = 0;
         //attackDamage = storedAttackDamage;
         canAttack = true;
+        canMove = true;
+        canAim = true;
+    }
+    public void CanMoveCanAim()
+    {
         canMove = true;
         canAim = true;
     }
@@ -131,7 +161,9 @@ public class WeaponCombo : MonoBehaviour
             }
             else
             {
+                canAttack = true;
                 canMove = true;
+                canAim = true;
                 antiBugTime = antiBugStoredTime;
             }
         }

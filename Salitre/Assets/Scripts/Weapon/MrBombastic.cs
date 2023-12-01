@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class MrBombastic : MonoBehaviour
 {
+    public Player input;
+
     public LineRenderer trajectoryLineRenderer;
     public GameObject explosionRadiusPrefab;
     public GameObject bombPrefab;  // Agrega un prefab de la bomba aquí
@@ -23,26 +26,36 @@ public class MrBombastic : MonoBehaviour
     public float explosionRadius = 2f;
 
     [Header("Controls")]
-    public KeyCode throwKey = KeyCode.Space;
+    public string throwKey = "Attack";
 
     private Vector3 startPosition;
     private Vector3 endPosition;
     public float endPosOffsetY;
 
-    private bool isAiming = false;
+    public float controllerSens;
+
+    [HideInInspector] public bool isAiming = false;
 
     GameObject existingExplosionRadius;
+    Vector3 direction;
 
     private void Start()
     {
+        input = ReInput.players.GetPlayer(0);
         SetupLineRenderer();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(throwKey))
+        if (input.GetButtonDown(throwKey))
         {
+            if (direction != Vector3.zero)
+            {
+                direction = Vector3.zero;
+            }
+
             StartAiming();
+            FindObjectOfType<PlayerInput>().enabled = false;
         }
 
         if (isAiming)
@@ -50,9 +63,10 @@ public class MrBombastic : MonoBehaviour
             Aim();
         }
 
-        if (Input.GetKeyUp(throwKey))
+        if (input.GetButtonUp(throwKey))
         {
             ThrowBomb();
+            FindObjectOfType<PlayerInput>().enabled = true;
         }
     }
 
@@ -65,8 +79,34 @@ public class MrBombastic : MonoBehaviour
     private void Aim()
     {
         startPosition = transform.position;
-        Vector3 mousePosition = GetMouseWorldPosition();
-        Vector3 direction = mousePosition - startPosition;
+
+        // Obtener la dirección del input del mouse o el eje
+        
+        if (GetCurrentInput.isMouseInput)
+        {
+            Vector3 mousePosition = GetMouseWorldPosition();
+            mousePosition.y = startPosition.y; // Proyectar el punto en el plano del suelo
+            direction = mousePosition - startPosition;
+        }
+        else
+        {
+            float horizontalInput = input.GetAxis("Move Horizontal");
+            float verticalInput = input.GetAxis("Move Vertical");
+
+            // Obtener la dirección de la cámara sin incluir la componente vertical
+            Vector3 cameraForward = Camera.main.transform.forward;
+            cameraForward.y = 0f;
+            cameraForward.Normalize();
+
+            // Obtener la dirección relativa al espacio de la cámara
+            Vector3 inputDirection = horizontalInput * Camera.main.transform.right + verticalInput * cameraForward;
+
+            // Aplicar la sensibilidad del controlador
+            direction += inputDirection * controllerSens;
+
+            // Ahora 'direction' contendrá la dirección ajustada según la cámara
+        }
+
         direction = Vector3.ClampMagnitude(direction, maxThrowDistance);
 
         Vector3 pseudoEndPos = startPosition + direction;
@@ -76,21 +116,6 @@ public class MrBombastic : MonoBehaviour
 
         DrawExplosionRadius(endPosition);
     }
-
-    /*private void ThrowBomb()
-    {
-        isAiming = false;
-        trajectoryLineRenderer.positionCount = 0;
-
-        Vector3 throwDirection = (endPosition - startPosition).normalized;
-
-        // Crear la bomba y configurarla para que siga la parábola
-        GameObject bomb = Instantiate(bombPrefab, startPosition, Quaternion.identity);
-        Rigidbody bombRigidbody = bomb.GetComponent<Rigidbody>();
-        bombRigidbody.velocity = throwDirection * throwForce;
-
-        DestroyExplosionRadius();
-    }*/
 
     private void ThrowBomb()
     {
@@ -108,7 +133,6 @@ public class MrBombastic : MonoBehaviour
         StartCoroutine(FollowTrajectory(bomb.transform, trajectoryPoints));
 
         isAiming = false;
-        trajectoryLineRenderer.positionCount = 0;
         DestroyExplosionRadius();
     }
 
@@ -123,44 +147,6 @@ public class MrBombastic : MonoBehaviour
         // Destruir la bomba al finalizar la trayectoria (puedes ajustar esto según tus necesidades)
         //Destroy(bombTransform.gameObject);
     }
-
-
-    /*private Vector3[] CalculateTrajectoryPoints(Vector3 start, Vector3 end, int pointsCount)
-    {
-        Vector3[] points = new Vector3[pointsCount];
-
-        for (int i = 0; i < pointsCount; i++)
-        {
-            float t = i / (float)(pointsCount - 1);
-            float height = Mathf.Lerp(start.y, end.y, t) + trajectoryHeight * Mathf.Sin(t * Mathf.PI);
-            float distance = Mathf.Lerp(0, Vector3.Distance(start, end), t);
-            Vector3 point = start + distance * (end - start).normalized + Vector3.up * height;
-
-            points[i] = point;
-        }
-
-        return points;
-    }
-
-    private Vector3[] CalculateTrajectoryPoints(Vector3 start, Vector3 end, int pointsCount)
-    {
-        Vector3[] points = new Vector3[pointsCount];
-
-        for (int i = 0; i < pointsCount; i++)
-        {
-            float t = i / (float)(pointsCount - 1);
-
-            // Ajusta la curva para hacerla más suave y redonda
-            float height = Mathf.Lerp(start.y, end.y, t) + trajectoryHeight * Mathf.Sin(t * Mathf.PI * roundnessFactor);
-
-            float distance = Mathf.Lerp(0, Vector3.Distance(start, end), t);
-            Vector3 point = start + distance * (end - start).normalized + Vector3.up * height;
-
-            points[i] = point;
-        }
-
-        return points;
-    }*/
 
     private Vector3[] CalculateTrajectoryPoints(Vector3 start, Vector3 end, int pointsCount)
     {
@@ -220,8 +206,10 @@ public class MrBombastic : MonoBehaviour
         }
     }
 
-    private void DestroyExplosionRadius()
+    public void DestroyExplosionRadius()
     {
+        trajectoryLineRenderer.positionCount = 0;
+
         if (existingExplosionRadius != null)
         {
             Destroy(existingExplosionRadius);

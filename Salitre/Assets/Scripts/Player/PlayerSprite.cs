@@ -10,11 +10,11 @@ public class PlayerSprite : MonoBehaviour
         if (!WeaponCombo.canMove)
         {
             GetComponent<SpriteRenderer>().sprite = GetComponent<AllSprites>().sprites[2];
-            GetComponentInParent<PlayerInput>().GetComponentInChildren<TrailRenderer>().enabled = true;
+            //GetComponentInParent<PlayerInput>().GetComponentInChildren<TrailRenderer>().enabled = true;
         }
         else
         {
-            GetComponentInParent<PlayerInput>().GetComponentInChildren<TrailRenderer>().enabled = false;
+            //GetComponentInParent<PlayerInput>().GetComponentInChildren<TrailRenderer>().enabled = false;
             if (playerInput.moveDir.x > 0)
             {
                 GetComponent<SpriteRenderer>().flipX = false;
