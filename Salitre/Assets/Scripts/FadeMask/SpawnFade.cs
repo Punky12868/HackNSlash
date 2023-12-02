@@ -5,13 +5,39 @@ using UnityEngine.Events;
 
 public class SpawnFade : MonoBehaviour
 {
-    [Tooltip ("Debug option, uncheck on build")]
-    [SerializeField] bool usingInput;
+    [SerializeField] bool runtime;
 
     [SerializeField] GameObject[] fades;
     public UnityEvent onFadeInSpawn, onFadeInEnd, onFadeOutSpawn, onMidFadeOut, onFadeOutEnd, onLoadingScreenSpawn, onLoadingScreenEnd, onDoorFadeInSpawn, onDoorFadeInEnd;
-    public static bool flashback;
-    public static bool nextLevelNoFlashback;
+    public bool flashback;
+    public bool nextLevelNoFlashback;
+    private void Awake()
+    {
+        if (runtime)
+        {
+            SpawnFade[] spawnFadeScripts = FindObjectsOfType<SpawnFade>();
+
+            for (int i = 0; i < spawnFadeScripts.Length; i++)
+            {
+                if (spawnFadeScripts[i] != this)
+                {
+                    spawnFadeScripts[i].onFadeInSpawn = onFadeInSpawn;
+                    spawnFadeScripts[i].onFadeInEnd = onFadeInEnd;
+                    spawnFadeScripts[i].onFadeOutSpawn = onFadeOutSpawn;
+                    spawnFadeScripts[i].onMidFadeOut = onMidFadeOut;
+                    spawnFadeScripts[i].onFadeOutEnd = onFadeOutEnd;
+                    spawnFadeScripts[i].onLoadingScreenSpawn = onLoadingScreenSpawn;
+                    spawnFadeScripts[i].onLoadingScreenEnd = onLoadingScreenEnd;
+                    spawnFadeScripts[i].onDoorFadeInSpawn = onDoorFadeInSpawn;
+                    spawnFadeScripts[i].onDoorFadeInEnd = onDoorFadeInEnd;
+
+                    spawnFadeScripts[i].flashback = false;
+                    spawnFadeScripts[i].nextLevelNoFlashback = false;
+                }
+            }
+            Destroy(gameObject);
+        }
+    }
     public void SpawnBasicFadeIn()
     {
         Instantiate(fades[0], transform);
@@ -53,32 +79,5 @@ public class SpawnFade : MonoBehaviour
         onLoadingScreenSpawn.Invoke();
 
         Debug.Log("SpawnLoadingScreen");
-    }
-
-    private void Update()
-    {
-        if (usingInput)
-        {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                SpawnBasicFadeIn();
-            }
-            else if (Input.GetKeyDown(KeyCode.H))
-            {
-                SpawnFadeInOut();
-            }
-            else if (Input.GetKeyDown(KeyCode.J))
-            {
-                SpawnLoadingFadeIn();
-            }
-            else if (Input.GetKeyDown(KeyCode.K))
-            {
-                SpawnFadeOut();
-            }
-            else if (Input.GetKeyDown(KeyCode.L))
-            {
-                SpawnLoadingScreen();
-            }
-        }
     }
 }

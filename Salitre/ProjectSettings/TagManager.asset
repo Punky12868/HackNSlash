@@ -20,6 +20,11 @@ TagManager:
   - ExplosionRadius
   - BombHitbox
   - Bomb
+  - a
+  - b
+  - c
+  - d
+  - e
   layers:
   - Default
   - TransparentFX
