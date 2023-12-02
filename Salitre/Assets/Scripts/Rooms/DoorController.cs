@@ -8,7 +8,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] Material debugCanEnter;
     [SerializeField] Material debugCannotEnter;
 
-    [HideInInspector] public Transform tpPoint;
+    public Transform tpPoint;
     [SerializeField] Transform assignedDoor;
     public bool canEnter;
     public bool nextLevel;
@@ -16,27 +16,19 @@ public class DoorController : MonoBehaviour
 
     public bool flashback;
 
-    UnityEvent OnEnter;
+    public UnityEvent OnEnter;
     private void Awake()
     {
-        OnEnter = FindObjectOfType<AssignEvent>().OnDoorEnter;
-
-        if (!nextLevel)
+        if (assignedDoor != null)
         {
-            if (assignedDoor != null)
-            {
-                tpPoint = assignedDoor.GetChild(0);
-            }
-            else if (assignedDoor == null || !canEnter)
-            {
-                canEnter = false;
-                GetComponent<Renderer>().material.color = debugCannotEnter.color;
-            }
+            tpPoint = assignedDoor.GetChild(0);
         }
-        else
+        else if (assignedDoor == null || !canEnter)
         {
-            tpPoint = transform.GetChild(0);
+            canEnter = false;
+            GetComponent<Renderer>().material.color = debugCannotEnter.color;
         }
+        
     }
     private void Update()
     {
@@ -57,11 +49,11 @@ public class DoorController : MonoBehaviour
 
             if (nextLevel && !flashback)
             {
-                FindObjectOfType<SpawnFade>().nextLevelNoFlashback = true;
+                SpawnFade.nextLevelNoFlashback = true;
             }
             else if (nextLevel && flashback)
             {
-                FindObjectOfType<SpawnFade>().flashback = true;
+                SpawnFade.flashback = true;
             }
             OnEnter.Invoke();
         }
@@ -73,10 +65,7 @@ public class DoorController : MonoBehaviour
     }
     public void CheckIfNpcRoom()
     {
-        if (!nextLevel)
-        {
-            tpPoint.gameObject.GetComponentInParent<Rooms>().ActivateDialog();
-        }
+        tpPoint.gameObject.GetComponentInParent<Rooms>().ActivateDialog();
     }
     public void OpenCloseDoor(bool b)
     {

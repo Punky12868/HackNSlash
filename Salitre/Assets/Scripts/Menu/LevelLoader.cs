@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
@@ -8,7 +7,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] GameObject flashback;
     public void LoadFlashback()
     {
-        Instantiate(flashback, GameObject.FindGameObjectWithTag("e").transform);
+        Instantiate(flashback, transform);
     }
     public void LoadLevel(int i)
     {
