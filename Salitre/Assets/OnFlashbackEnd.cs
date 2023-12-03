@@ -4,22 +4,43 @@ using UnityEngine;
 
 public class OnFlashbackEnd : MonoBehaviour
 {
+    public bool mainMenu;
     int i;
     bool stop;
     private void Awake()
     {
-        i = FindObjectOfType<AllRooms>().currentDoor.levelID;
-        Debug.Log(i);
-    }
-    private void Update()
-    {
-        if (i != FindObjectOfType<AllRooms>().currentDoor.levelID && !stop)
+        if (mainMenu)
+        {
+            i = FindObjectOfType<LevelLoader>().flashbackMenu;
+        }
+        else
         {
             i = FindObjectOfType<AllRooms>().currentDoor.levelID;
         }
-        else if (i == FindObjectOfType<AllRooms>().currentDoor.levelID && !stop)
+    }
+    private void Update()
+    {
+        if (!mainMenu)
         {
-            stop = true;
+            if (i != FindObjectOfType<AllRooms>().currentDoor.levelID && !stop)
+            {
+                i = FindObjectOfType<AllRooms>().currentDoor.levelID;
+            }
+            else if (i == FindObjectOfType<AllRooms>().currentDoor.levelID && !stop)
+            {
+                stop = true;
+            }
+        }
+        else
+        {
+            if (i != FindObjectOfType<LevelLoader>().flashbackMenu && !stop)
+            {
+                i = FindObjectOfType<LevelLoader>().flashbackMenu;
+            }
+            else if (i == FindObjectOfType<LevelLoader>().flashbackMenu && !stop)
+            {
+                stop = true;
+            }
         }
     }
     public void NextLevel()
