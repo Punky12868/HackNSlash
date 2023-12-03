@@ -6,11 +6,11 @@ public class FlashbackController : MonoBehaviour
 {
     public void Flashback()
     {
-        if (FindObjectOfType<SpawnFade>().flashback)
+        if (SpawnFade.flashback)
         {
             FindObjectOfType<LevelLoader>().LoadFlashback();
         }
-        else if (FindObjectOfType<SpawnFade>().nextLevelNoFlashback && !FindObjectOfType<SpawnFade>().flashback)
+        else if (SpawnFade.nextLevelNoFlashback && !SpawnFade.flashback)
         {
             FindObjectOfType<LevelLoader>().LoadLevel(FindObjectOfType<AllRooms>().currentDoor.levelID);
         }

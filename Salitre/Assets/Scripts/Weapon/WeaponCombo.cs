@@ -164,7 +164,6 @@ public class WeaponCombo : MonoBehaviour
                 canAttack = true;
                 canMove = true;
                 canAim = true;
-                combo = 0;
                 antiBugTime = antiBugStoredTime;
             }
         }
