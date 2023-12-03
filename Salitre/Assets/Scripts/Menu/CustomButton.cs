@@ -29,4 +29,10 @@ public class CustomButton : Button
                 break;
         }
     }
+    public void changeColor(string color)
+    {
+        ColorBlock colors = new ColorBlock();
+        colors.normalColor = ColorUtility.TryParseHtmlString(color, out Color newColor) ? newColor : colors.normalColor;
+        this.colors = colors;
+    }
 }

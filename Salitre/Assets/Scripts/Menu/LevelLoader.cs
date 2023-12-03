@@ -5,13 +5,24 @@ using UnityEngine;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] GameObject flashback;
+    [HideInInspector] public int flashbackMenu;
+    public bool isMenu;
     public void LoadFlashback()
     {
         Instantiate(flashback, transform);
     }
     public void LoadLevel(int i)
     {
-        StartCoroutine(LoadAsynchronously(i));
+        if (isMenu)
+        {
+            isMenu = false;
+            flashbackMenu = i;
+            LoadFlashback();
+        }
+        else
+        {
+            StartCoroutine(LoadAsynchronously(i));
+        }
     }
     IEnumerator LoadAsynchronously(int i)
     {
