@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.68417084, g: 0.48945323, b: 0.23704731, a: 1}
+  m_IndirectSpecularColor: {r: 0.68417084, g: 0.48945314, b: 0.23704766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,10 +177,10 @@ MonoBehaviour:
   - "Estoy agotada de todo esto\u2026"
   - "Todo el tiempo que estuve encerrada y todo porque t\xFA quer\xEDas..."
   - "Perd\xED tanto de mi misma en ese tiempo, la oscuridad de la habitaci\xF3n no
-    ven\xEDa solo de s\xED misma\u2026"
-  - "sino de ti, tu ambici\xF3n, t\xFA sed de querer ser\u2026"
-  - horrible
-  - "es lo que los conden\xF3 a todos."
+    ven\xEDa del encierro\u2026"
+  - "Sino de ti, tu ambici\xF3n, t\xFA sed de querer ser\u2026"
+  - Horrible.
+  - "Es lo que los conden\xF3 a todos."
   clickCooldown: 0.35
   clickInternalCooldown: 0
   OnDialogStart:
@@ -2309,10 +2309,10 @@ MonoBehaviour:
   dialogs:
   - "Ya est\xE1 todo destruido, realmente lo perdimos todo."
   - "Estoy cansada de tanto trabajar, y aun as\xED tendremos que levantar todo de
-    nuevo"
-  - y lo peor es que dicen que es nuestra culpa
-  - "pero entre varios hablan de que la explosi\xF3n no se caus\xF3 sola"
-  - parece que vieron a alguien arruinandonos a todos.
+    nuevo."
+  - Y lo peor es que dicen que es nuestra culpa.
+  - "Pero entre varios hablan de que la explosi\xF3n no se caus\xF3 sola."
+  - Parece que vieron a alguien arruinandonos a todos.
   - Parece que te vieron a ti.
   clickCooldown: 0.35
   clickInternalCooldown: 0
@@ -3348,7 +3348,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653642828}
-  m_LocalRotation: {x: 0.3141166, y: -0.35687613, z: 0.12881072, w: 0.8702747}
+  m_LocalRotation: {x: 0.31411657, y: -0.3568761, z: 0.12881072, w: 0.8702747}
   m_LocalPosition: {x: 2.2140884, y: 1.081995, z: 10.226151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3755,11 +3755,11 @@ MonoBehaviour:
   dialogSpawnPoint: {fileID: 210578438}
   dialogPrefab: {fileID: 8372709155025551586, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
-  - Oye, te ves cansado de correr tanto
+  - Oye, te ves cansado de correr tanto.
   - "\xBFNecesitas ayuda?"
   - "Yo tambi\xE9n me cans\xE9 de correr esa vez\u2026"
-  - "Creo que ni se atrevi\xF3 a darse la vuelta para verme."
-  - "Aun sigue doliendo, y no hablo de este hoyo que tengo en la cara, t\xFA sabes
+  - "Ni siquiera se atrevi\xF3 a darse la vuelta para verme."
+  - "Aun sigue doliendo, y no hablo de los disparos que me llegaron, t\xFA sabes
     bien de qu\xE9 estoy hablando\u2026"
   - "Imb\xE9cil."
   clickCooldown: 0.35
@@ -8264,7 +8264,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2147471190}
-  m_LocalRotation: {x: 0.3141166, y: -0.35687613, z: 0.12881072, w: 0.8702747}
+  m_LocalRotation: {x: 0.31411657, y: -0.3568761, z: 0.12881072, w: 0.8702747}
   m_LocalPosition: {x: 2.2140884, y: 1.081995, z: 10.226151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
