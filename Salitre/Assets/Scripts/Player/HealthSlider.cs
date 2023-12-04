@@ -6,7 +6,7 @@ using EmeraldAI.Example;
 
 public class HealthSlider : MonoBehaviour
 {
-    [SerializeField] Slider slider;
+    public Slider slider;
     EmeraldAIPlayerHealth playerHealth;
     private void Awake()
     {
