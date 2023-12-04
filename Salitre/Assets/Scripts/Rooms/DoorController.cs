@@ -9,7 +9,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] Material debugCannotEnter;
 
     public Transform tpPoint;
-    [SerializeField] Transform assignedDoor;
+    public Transform assignedDoor;
     public bool canEnter;
     public bool nextLevel;
     public int levelID;

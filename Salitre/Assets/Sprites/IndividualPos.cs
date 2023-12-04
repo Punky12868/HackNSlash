@@ -9,7 +9,7 @@ public class IndividualPos : MonoBehaviour
     public enum Type {Pickaxe, Knife, Bomb}
     public Type weaponType;
 
-    [SerializeField] int damage;
+    public int damage;
 
     [SerializeField] IndividualPos pickaxe, knife, bomb;
 

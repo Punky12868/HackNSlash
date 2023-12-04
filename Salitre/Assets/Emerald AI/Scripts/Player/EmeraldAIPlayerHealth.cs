@@ -13,6 +13,8 @@ namespace EmeraldAI.Example
     /// </summary>
     public class EmeraldAIPlayerHealth : MonoBehaviour
     {
+        [HideInInspector] public CheckPoint currentCheckpoint;
+
         public int CurrentHealth = 100; [Space]
         public UnityEvent DamageEvent;
         public UnityEvent DeathEvent;
@@ -42,6 +44,18 @@ namespace EmeraldAI.Example
         public void PlayerDeath ()
         {
             DeathEvent.Invoke();
+
+            Rooms[] rooms = FindObjectsOfType<Rooms>();
+
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                if (rooms[i].activeRoom)
+                {
+                    rooms[i].OnPlayerDead();
+                }
+            }
+
+            //currentCheckpoint.LoadPlayer();
         }
     }
 }
