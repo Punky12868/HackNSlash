@@ -6,39 +6,43 @@ using UnityEngine.AI;
 public class FlipEnemySprite : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
+    private SpriteRenderer[] spriteRenderers;
 
     [Tooltip ("If the sprites are facing left activate this option to invert the flip")]
     [SerializeField] bool facingRight;
     private void Start()
     {
-        navMeshAgent = GetComponentInParent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
     }
 
     private void Update()
     {
         Vector3 velocity = navMeshAgent.velocity;
 
-        if (velocity.x > 0)
+        foreach (SpriteRenderer renderer in spriteRenderers)
         {
-            if (!facingRight)
+            if (velocity.x > 0)
             {
-                transform.localScale = new Vector3(-1, 1, 1);
-
+                if (!facingRight)
+                {
+                    renderer.flipX = true;
+                }
+                else
+                {
+                    renderer.flipX = false;
+                }
             }
-            else
+            else if (velocity.x < 0)
             {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
-        }
-        else if (velocity.x < 0)
-        {
-            if (!facingRight)
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
+                if (!facingRight)
+                {
+                    renderer.flipX = false;
+                }
+                else
+                {
+                    renderer.flipX = true;
+                }
             }
         }
     }
