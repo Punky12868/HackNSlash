@@ -153,7 +153,7 @@ public class WeaponCombo : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!canMove)
+        if (!canMove || canMove && combo != 0)
         {
             if (antiBugTime > 0)
             {
@@ -161,6 +161,7 @@ public class WeaponCombo : MonoBehaviour
             }
             else
             {
+                combo = 0;
                 canAttack = true;
                 canMove = true;
                 canAim = true;
