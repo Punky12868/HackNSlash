@@ -6135,7 +6135,7 @@ MonoBehaviour:
   DamageAmountRun: 5
   WanderRadius: 12
   TabNumber: 1
-  TemperamentTabNumber: 3
+  TemperamentTabNumber: 2
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 2
   SoundTabNumber: 0

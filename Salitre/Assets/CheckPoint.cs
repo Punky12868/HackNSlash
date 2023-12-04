@@ -8,17 +8,29 @@ public class CheckPoint : MonoBehaviour
     public GameObject player;
     IndividualPos[] weaponSelect;
     bool cannotBeUsed;
+    bool isWeaponUnlock;
+    int weaponIndex;
     private void Awake()
     {
-        designatedroom = GetComponentInParent<Rooms>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (!isWeaponUnlock)
+        {
+            designatedroom = GetComponentInParent<Rooms>();
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         weaponSelect = FindObjectsOfType<IndividualPos>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && !cannotBeUsed)
         {
-            SavePlayer();
+            if (!isWeaponUnlock)
+            {
+                SavePlayer();
+            }
+            else
+            {
+                UnlockWeapon();
+            }
             cannotBeUsed = true;
         }
     }
@@ -65,5 +77,8 @@ public class CheckPoint : MonoBehaviour
 
         Debug.Log("Loaded");
     }
-
+    void UnlockWeapon()
+    {
+        weaponSelect[weaponIndex].blocked = false;
+    }
 }
