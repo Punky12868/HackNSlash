@@ -9,6 +9,8 @@ public class PopUpCore : MonoBehaviour
 {
     public Player input;
 
+    ConfigMenu configMenu;
+
     [HideInInspector] public Vector2 startPos, endPos;
     public float travelTime = 1;
 
@@ -26,6 +28,13 @@ public class PopUpCore : MonoBehaviour
     private void Awake()
     {
         input = ReInput.players.GetPlayer(0);
+
+        configMenu = FindObjectOfType<ConfigMenu>();
+
+        if (configMenu.tutorial)
+        {
+            Destroy(gameObject);
+        }
 
         if (usingSlider)
         {
