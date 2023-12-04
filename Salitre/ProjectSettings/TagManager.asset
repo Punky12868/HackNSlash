@@ -20,12 +20,6 @@ TagManager:
   - ExplosionRadius
   - BombHitbox
   - Bomb
-  - e
-  - c
-  - d
-  - b
-  - a
-  - EnemySpawnGameObject
   layers:
   - Default
   - TransparentFX

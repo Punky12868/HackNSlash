@@ -4,7 +4,6 @@ using UnityEngine;
 using Febucci.UI;
 using Rewired;
 using TMPro;
-using DG.Tweening;
 
 public class DialoguePlayer : MonoBehaviour
 {
@@ -15,15 +14,6 @@ public class DialoguePlayer : MonoBehaviour
 
     string[] dialogs;
     int dialogIndex;
-
-    [SerializeField] Transform topBar, bottomBar, fadePanel, npcHead;
-    [SerializeField] Transform topBarStartingPos, bottomBarStartingPos, npcHeadStartingPos;
-    [SerializeField] Transform topBarEndingPos, bottomBarEndingPos, npcHeadEndingPos;
-
-    [SerializeField] Sprite[] npcHeads;
-
-    bool startAnimation;
-    bool animationDone;
     private void Awake()
     {
         dialogIndex = 0;
@@ -34,36 +24,8 @@ public class DialoguePlayer : MonoBehaviour
         currentDialogSystem.currentDialogOnScreen = this.gameObject;
 
         currentDialogSystem.clickInternalCooldown = currentDialogSystem.clickCooldown;
-
-        npcHead.GetComponent<UnityEngine.UI.Image>().sprite = npcHeads[FindObjectOfType<NpcId>().ID];
-
-        topBar.position = topBarStartingPos.position;
-        bottomBar.position = bottomBarStartingPos.position;
-        npcHead.position = npcHeadStartingPos.position;
-
-        fadePanel.GetComponent<CanvasGroup>().DOFade(0f, 0f);
-
-        startAnimation = true;
     }
     private void Update()
-    {
-        if (bottomBar.position.y >= bottomBarEndingPos.position.y - 0.05)
-        {
-            animationDone = true;
-        }
-        else if (animationDone && bottomBar.position.y <= bottomBarStartingPos.position.y + 0.05)
-        {
-            currentDialogSystem.OnDialogEnd.Invoke();
-        }
-
-        if (animationDone)
-        {
-            DialogInteraction();
-        }
-
-        DialogAnimation();
-    }
-    void DialogInteraction()
     {
         if (dialogIndex == 0 && currentDialogSystem.clickInternalCooldown <= 0)
         {
@@ -87,29 +49,10 @@ public class DialoguePlayer : MonoBehaviour
                 }
                 else
                 {
-                    startAnimation = false;
+                    currentDialogSystem.OnDialogEnd.Invoke();
                 }
             }
             currentDialogSystem.clickInternalCooldown = currentDialogSystem.clickCooldown;
-        }
-    }
-    void DialogAnimation()
-    {
-        if (startAnimation)
-        {
-            topBar.DOMove(topBarEndingPos.position, 1f);
-            bottomBar.DOMove(bottomBarEndingPos.position, 1f);
-            npcHead.DOMove(npcHeadEndingPos.position, 1f);
-
-            fadePanel.GetComponent<CanvasGroup>().DOFade(1f, 1f);
-        }
-        else
-        {
-            topBar.DOMove(topBarStartingPos.position, 1f);
-            bottomBar.DOMove(bottomBarStartingPos.position, 1f);
-            npcHead.DOMove(npcHeadStartingPos.position, 1f);
-
-            fadePanel.GetComponent<CanvasGroup>().DOFade(0f, 1f);
         }
     }
 }
