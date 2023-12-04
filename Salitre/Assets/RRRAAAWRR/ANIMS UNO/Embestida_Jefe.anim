@@ -38,7 +38,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -72,7 +72,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -106,7 +106,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -149,7 +149,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -192,7 +192,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Diente Der.
+    path: Renderer/Diente Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -235,7 +235,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -269,7 +269,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Mano Der.
+    path: Renderer/Mano Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -303,7 +303,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -355,7 +355,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -398,7 +398,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -450,7 +450,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -502,7 +502,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -545,7 +545,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -597,7 +597,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -649,7 +649,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -728,7 +728,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -763,7 +763,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -797,7 +797,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -831,7 +831,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -865,7 +865,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Cuerpo
+    path: Renderer/Cuerpo
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -917,7 +917,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -969,7 +969,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Diente Der.
+    path: Renderer/Diente Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1012,7 +1012,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Diente Izq.
+    path: Renderer/Diente Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1046,7 +1046,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1107,7 +1107,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Mano Der.
+    path: Renderer/Mano Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1159,7 +1159,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1211,7 +1211,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1263,7 +1263,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1324,7 +1324,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1385,7 +1385,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1446,7 +1446,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1516,7 +1516,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1577,7 +1577,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1638,7 +1638,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -1650,238 +1650,238 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 733961357
+      path: 1345481439
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1344223593
+      path: 730992443
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2653050426
+      path: 3853475944
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2692942062
+      path: 637135736
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2461758066
+      path: 396742556
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3910866838
+      path: 1812310648
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 656832709
+      path: 2721629483
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3597287446
+      path: 3933715676
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2915706354
+      path: 2446842168
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1677150881
+      path: 1609217643
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4293234831
+      path: 2221450973
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 836304860
+      path: 1247136142
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 112665272
+      path: 1939519221
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3364507115
+      path: 3181894054
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2216625453
+      path: 16890051
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1243769470
+      path: 3476871056
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2367016592
+      path: 2232278569
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1126736323
+      path: 1261482362
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1344223593
+      path: 730992443
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2653050426
+      path: 3853475944
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2461758066
+      path: 396742556
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3910866838
+      path: 1812310648
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3597287446
+      path: 3933715676
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2915706354
+      path: 2446842168
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1677150881
+      path: 1609217643
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4293234831
+      path: 2221450973
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 836304860
+      path: 1247136142
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 112665272
+      path: 1939519221
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3364507115
+      path: 3181894054
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2216625453
+      path: 16890051
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1243769470
+      path: 3476871056
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2367016592
+      path: 2232278569
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1126736323
+      path: 1261482362
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 733961357
+      path: 1345481439
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -1943,7 +1943,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1980,7 +1980,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2017,7 +2017,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2045,7 +2045,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2073,7 +2073,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2101,7 +2101,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Brazo Cen.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2138,7 +2138,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2175,7 +2175,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2212,7 +2212,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2249,7 +2249,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2286,7 +2286,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2323,7 +2323,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Brazo Der.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2360,7 +2360,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2397,7 +2397,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2434,7 +2434,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2471,7 +2471,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2508,7 +2508,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2545,7 +2545,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Brazo Izq.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2582,7 +2582,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Cuerpo
+    path: Renderer/Cuerpo
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2619,7 +2619,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Cuerpo
+    path: Renderer/Cuerpo
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2656,7 +2656,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Cuerpo
+    path: Renderer/Cuerpo
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2711,7 +2711,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2766,7 +2766,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2821,7 +2821,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2867,7 +2867,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2913,7 +2913,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2959,7 +2959,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Diente Cen.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3014,7 +3014,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Diente Der.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3069,7 +3069,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Diente Der.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3124,7 +3124,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Diente Der.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3170,7 +3170,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Diente Der.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3216,7 +3216,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Diente Der.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3262,7 +3262,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Diente Der.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3308,7 +3308,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Diente Izq.
+    path: Renderer/Diente Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3354,7 +3354,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Diente Izq.
+    path: Renderer/Diente Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3400,7 +3400,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Diente Izq.
+    path: Renderer/Diente Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3437,7 +3437,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3474,7 +3474,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3511,7 +3511,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3557,7 +3557,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3603,7 +3603,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3649,7 +3649,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Mano Cen.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3713,7 +3713,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Mano Der.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3777,7 +3777,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Mano Der.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3841,7 +3841,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Mano Der.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3878,7 +3878,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Mano Der.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3915,7 +3915,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Mano Der.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3952,7 +3952,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Mano Der.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4007,7 +4007,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4062,7 +4062,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4117,7 +4117,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4154,7 +4154,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4191,7 +4191,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4228,7 +4228,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Mano Izq.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4283,7 +4283,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4338,7 +4338,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4393,7 +4393,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4448,7 +4448,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4503,7 +4503,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4558,7 +4558,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Muslo Der.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4613,7 +4613,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4668,7 +4668,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4723,7 +4723,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4769,7 +4769,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4815,7 +4815,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4861,7 +4861,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Muslo Izq.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4925,7 +4925,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4989,7 +4989,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5053,7 +5053,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5108,7 +5108,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5163,7 +5163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5218,7 +5218,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Muslo UltDer.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5282,7 +5282,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5346,7 +5346,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5410,7 +5410,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5465,7 +5465,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5520,7 +5520,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5575,7 +5575,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5639,7 +5639,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5703,7 +5703,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5767,7 +5767,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5813,7 +5813,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5859,7 +5859,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5905,7 +5905,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Pierna Der.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5978,7 +5978,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6051,7 +6051,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6124,7 +6124,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6179,7 +6179,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6234,7 +6234,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6289,7 +6289,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Pierna Izq.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6353,7 +6353,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6417,7 +6417,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6481,7 +6481,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6536,7 +6536,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6591,7 +6591,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6646,7 +6646,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Pierna UltDer.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6710,7 +6710,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6774,7 +6774,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6838,7 +6838,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -6920,7 +6920,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7002,7 +7002,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7084,7 +7084,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -7095,7 +7095,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Diente Der.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7105,7 +7105,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Diente Der.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7115,7 +7115,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Diente Der.
+    path: Renderer/Diente Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7125,7 +7125,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Pierna UltDer.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7135,7 +7135,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Pierna UltDer.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7145,7 +7145,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Pierna UltDer.
+    path: Renderer/Pierna Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7155,7 +7155,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Brazo Cen.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7165,7 +7165,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Brazo Cen.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7175,7 +7175,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Brazo Cen.
+    path: Renderer/Pierna UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7185,7 +7185,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Brazo Der.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7195,7 +7195,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Brazo Der.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7205,7 +7205,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Brazo Der.
+    path: Renderer/Brazo Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7215,7 +7215,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Brazo Izq.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7225,7 +7225,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Brazo Izq.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7235,7 +7235,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Brazo Izq.
+    path: Renderer/Brazo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7245,7 +7245,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Diente Cen.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7255,7 +7255,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Diente Cen.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7265,7 +7265,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Diente Cen.
+    path: Renderer/Brazo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7275,7 +7275,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Pierna Izq.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7285,7 +7285,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Pierna Izq.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7295,7 +7295,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Pierna Izq.
+    path: Renderer/Pierna Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7305,7 +7305,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Mano Cen.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7315,7 +7315,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Mano Cen.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7325,7 +7325,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Mano Cen.
+    path: Renderer/Diente Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7335,7 +7335,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Mano Der.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7345,7 +7345,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Mano Der.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7355,7 +7355,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Mano Der.
+    path: Renderer/Mano Cen.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7365,7 +7365,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Mano Izq.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7375,7 +7375,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Mano Izq.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7385,7 +7385,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Mano Izq.
+    path: Renderer/Mano Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7395,7 +7395,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Muslo Der.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7405,7 +7405,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Muslo Der.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7415,7 +7415,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Muslo Der.
+    path: Renderer/Mano Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7425,7 +7425,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Muslo Izq.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7435,7 +7435,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Muslo Izq.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7445,7 +7445,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Muslo Izq.
+    path: Renderer/Muslo Der.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7455,7 +7455,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Muslo UltDer.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7465,7 +7465,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Muslo UltDer.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7475,7 +7475,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Muslo UltDer.
+    path: Renderer/Muslo Izq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7485,7 +7485,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7495,7 +7495,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7505,7 +7505,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Muslo UltIzq.
+    path: Renderer/Muslo UltDer.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7515,7 +7515,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Pierna Der.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7525,7 +7525,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Pierna Der.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7535,7 +7535,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Pierna Der.
+    path: Renderer/Muslo UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7545,7 +7545,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7555,7 +7555,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7565,7 +7565,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Pierna UltIzq.
+    path: Renderer/Pierna UltIzq.
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

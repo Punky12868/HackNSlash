@@ -15,4 +15,8 @@ public class LookAtCamera : MonoBehaviour
         var rotation = _vCamera.transform.rotation;
         transform.LookAt(transform.position + rotation * Vector3.forward, rotation * Vector3.up);
     }
+    public void AttackEvent()
+    {
+        GetComponentInParent<EmeraldAI.EmeraldAISystem>().OnAttackEvent.Invoke();
+    }
 }
