@@ -1,12 +1,9 @@
-using EmeraldAI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class OnEnemyDeath : MonoBehaviour
 {
-    public int ID;
     UnityEngine.AI.NavMeshAgent agent;
 
     float speed, angularSpeed, acceleration;
@@ -34,5 +31,17 @@ public class OnEnemyDeath : MonoBehaviour
             room.CheckOpenDoor();
             //dead = true;
         }
+    }
+    public IEnumerator OnHit()
+    {
+        /*agent.speed = 10;
+        agent.angularSpeed = 0;
+        agent.acceleration = 20;*/
+
+        yield return new WaitForSeconds(.5f);
+
+        /*agent.speed = speed;
+        agent.angularSpeed = angularSpeed;
+        agent.acceleration = acceleration;*/
     }
 }
