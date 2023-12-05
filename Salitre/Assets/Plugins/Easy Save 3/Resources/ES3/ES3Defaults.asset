@@ -37,13 +37,6 @@ MonoBehaviour:
     - Febucci.TextAnimator.Demo.Runtime
     - Febucci.TextAnimator.Runtime
     - Febucci.TextAnimator.TMP.Runtime
-    - Friedforfun.ContextSteering
-    - Friedforfun.ContextSteering.Core
-    - Friedforfun.ContextSteering.Demo
-    - Friedforfun.ContextSteering.PlanarMovement
-    - Friedforfun.ContextSteering.Tests
-    - Friedforfun.ContextSteering.Tests.TestUtils
-    - Friedforfun.ContextSteering.Utilities
     - OccaSoftware.Buto
     - Rewired_Windows_Functions
     showAdvancedSettings: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -17,11 +18,11 @@ public class LevelLoader : MonoBehaviour
         {
             isMenu = false;
             flashbackMenu = i;
-            LoadFlashback();
+            //LoadFlashback();
         }
         else
         {
-            StartCoroutine(LoadAsynchronously(i));
+            SceneManager.LoadScene(1);
         }
     }
     IEnumerator LoadAsynchronously(int i)

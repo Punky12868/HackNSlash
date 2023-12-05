@@ -77,13 +77,6 @@ public class AttackHitbox : MonoBehaviour
                         powerSlider.value++;
                     }
                 }
-                //Damages an AI's location based damage component
-                else if (entity.gameObject.GetComponent<LocationBasedDamageArea>() != null)
-                {
-                    LocationBasedDamageArea LBDArea = entity.gameObject.GetComponent<LocationBasedDamageArea>();
-                    int DamageAmount = GetComponentInParent<DotToRandomTransform>().GetComponentInChildren<Weapon>().damage;
-                    LBDArea.DamageArea(DamageAmount, EmeraldAISystem.TargetType.AI, transform, 300);
-                }
 
                 Debug.Log("Hit: " + entity.gameObject.name);
             }
