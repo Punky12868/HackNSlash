@@ -41,13 +41,13 @@ public class DialoguePlayer : MonoBehaviour
         bottomBar.position = bottomBarStartingPos.position;
         npcHead.position = npcHeadStartingPos.position;
 
-        fadePanel.GetComponent<SpriteRenderer>().DOFade(0f, 0f);
+        fadePanel.GetComponent<CanvasGroup>().alpha = 0;
 
         startAnimation = true;
     }
     private void Update()
     {
-        if (bottomBar.position.y >= bottomBarEndingPos.position.y - 0.01)
+        if (bottomBar.position.y >= bottomBarEndingPos.position.y - 0.05)
         {
             animationDone = true;
         }
@@ -101,7 +101,7 @@ public class DialoguePlayer : MonoBehaviour
             bottomBar.DOMove(bottomBarEndingPos.position, 1f);
             npcHead.DOMove(npcHeadEndingPos.position, 1f);
 
-            fadePanel.GetComponent<SpriteRenderer>().DOFade(0.8f, 1f);
+            fadePanel.GetComponent<CanvasGroup>().DOFade(1f, 1f);
         }
         else
         {
@@ -109,7 +109,7 @@ public class DialoguePlayer : MonoBehaviour
             bottomBar.DOMove(bottomBarStartingPos.position, 1f);
             npcHead.DOMove(npcHeadStartingPos.position, 1f);
 
-            fadePanel.GetComponent<SpriteRenderer>().DOFade(0f, 1f);
+            fadePanel.GetComponent<CanvasGroup>().DOFade(0f, 1f);
         }
     }
 }

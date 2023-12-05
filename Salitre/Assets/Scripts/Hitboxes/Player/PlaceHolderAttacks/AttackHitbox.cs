@@ -50,6 +50,13 @@ public class AttackHitbox : MonoBehaviour
 
             foreach (Collider entity in hitEmeraldEntities)
             {
+                if (entity.gameObject.GetComponent<OnEnemyDeath>() != null)
+                {
+                    Debug.Log("uh");
+                    entity.gameObject.GetComponent<OnEnemyDeath>().Death();
+                    entity.gameObject.SetActive(false);
+                }
+
                 if (entity.gameObject.GetComponent<EmeraldAISystem>() != null)
                 {
 

@@ -29,6 +29,8 @@ public class DoorController : MonoBehaviour
             GetComponent<Renderer>().material.color = debugCannotEnter.color;
         }
         
+        SpawnFade.nextLevelNoFlashback = false;
+        SpawnFade.flashback = false;
     }
     private void Update()
     {

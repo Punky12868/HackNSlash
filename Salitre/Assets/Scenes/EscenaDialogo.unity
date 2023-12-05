@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - "\xA1T\xFA!"
   - "\xA1Al\xE9jate de m\xED!"
@@ -446,8 +446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - "Hoy 16 de julio, se efectu\xF3 un asalto en las oficinas de la salitrera por
     dos individuos."
@@ -1767,9 +1767,11 @@ RectTransform:
   - {fileID: 824288080}
   - {fileID: 252559914}
   - {fileID: 1935146657}
+  - {fileID: 618801289}
   - {fileID: 849985301}
   - {fileID: 1530884685}
   - {fileID: 1890463381}
+  - {fileID: 1079991444}
   m_Father: {fileID: 2036163330}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2306,8 +2308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - "Ya est\xE1 todo destruido, realmente lo perdimos todo."
   - "Estoy cansada de tanto trabajar, y aun as\xED tendremos que levantar todo de
@@ -2973,8 +2975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - "El pasado 19 de agosto, ocurri\xF3 una explosi\xF3n dentro de las oficinas de
     la salitrera despu\xE9s de que una bomba casera reaccionara con el salitre almacenado."
@@ -3125,6 +3127,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607145183}
+  m_CullTransparentMesh: 1
+--- !u!1 &618801288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618801289}
+  - component: {fileID: 618801291}
+  - component: {fileID: 618801290}
+  m_Layer: 5
+  m_Name: DialogPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &618801289
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618801288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 210578438}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &618801290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618801288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &618801291
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618801288}
   m_CullTransparentMesh: 1
 --- !u!1 &653642828
 GameObject:
@@ -3754,8 +3832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - Oye, te ves cansado de correr tanto.
   - "\xBFNecesitas ayuda?"
@@ -4530,7 +4608,7 @@ RectTransform:
   - {fileID: 94710847}
   - {fileID: 1850830413}
   m_Father: {fileID: 210578438}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4803,8 +4881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - "Desde 24 de septiembre que no se sabe sobre el paradero de Irene Silva, hoy,
     29 del mismo mes, se sigue sin conocer su ubicaci\xF3n."
@@ -4925,8 +5003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogOnScreen: {fileID: 0}
-  dialogSpawnPoint: {fileID: 210578438}
-  dialogPrefab: {fileID: 591654613330414748, guid: c4345764a09f50845a435f75d1020a01, type: 3}
+  dialogSpawnPoint: {fileID: 618801289}
+  dialogPrefab: {fileID: 651911544832315503, guid: c4345764a09f50845a435f75d1020a01, type: 3}
   dialogs:
   - "Este 7 de octubre, una nueva huelga se desarroll\xF3 frente a las oficinas de
     la salitrera Hartshorn."
@@ -5148,6 +5226,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1079991443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1079991444}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1079991444
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079991443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 210578438}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1122538316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5664,6 +5778,7 @@ GameObject:
   - component: {fileID: 1406513400}
   - component: {fileID: 1406513399}
   - component: {fileID: 1406513410}
+  - component: {fileID: 1406513411}
   m_Layer: 3
   m_Name: NPC TEST
   m_TagString: Untagged
@@ -6740,6 +6855,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 2
+--- !u!114 &1406513411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406513397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98a573621da034d8ca48d90d3ac969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcId: {fileID: 0}
+  ID: 0
+  dead: 0
 --- !u!1 &1423332646
 GameObject:
   m_ObjectHideFlags: 0
@@ -7228,7 +7358,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210578438}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7635,7 +7765,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210578438}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

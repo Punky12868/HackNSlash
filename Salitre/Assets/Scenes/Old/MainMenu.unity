@@ -3098,6 +3098,7 @@ GameObject:
   - component: {fileID: 1953976873}
   - component: {fileID: 1953976872}
   - component: {fileID: 1953976875}
+  - component: {fileID: 1953976876}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -3168,7 +3169,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1953976873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1953976876}
+        m_TargetAssemblyTypeName: Salir, Assembly-CSharp
+        m_MethodName: SalirJuego
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   selected: 0
 --- !u!114 &1953976873
 MonoBehaviour:
@@ -3283,6 +3296,20 @@ MonoBehaviour:
   scaleDamping: 20
   scaleSelectedMultiplier: 1.4
   arrow: {fileID: 1553580156}
+--- !u!114 &1953976876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953976870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2dd253767ad9b45b277a01a00a8d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creditsScene: 0
+  salirMainMenu: 0
 --- !u!1 &2049220330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,7 +3512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2067132093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1953976876}
+        m_TargetAssemblyTypeName: Salir, Assembly-CSharp
+        m_MethodName: CreditosScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   selected: 0
 --- !u!114 &2067132093
 MonoBehaviour:

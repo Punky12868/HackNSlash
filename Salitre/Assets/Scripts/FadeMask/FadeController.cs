@@ -29,6 +29,8 @@ public class FadeController : MonoBehaviour
         mask.localScale = new Vector3(fadeInitialScale, fadeInitialScale);
         finalScale = new Vector3(fadeFinalScale, fadeFinalScale);
         errorMargen = new Vector3(margen, margen);
+
+        FindObjectOfType<FlashbackController>().Flashback();
     }
     private void Update()
     {

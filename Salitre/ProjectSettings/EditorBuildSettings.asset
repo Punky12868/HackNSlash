@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Old/MainMenu.unity
     guid: 17b1333b65c52b246909acf0061c5759
   - enabled: 1
-    path: Assets/Scenes/PlaceHolderLevel.unity
-    guid: 4ee5b9704a2b16442b573e26731586b1
+    path: Assets/Scenes/A LA SEGURA/A1.unity
+    guid: 5006aefce338a054587268c62560d6cd
+  - enabled: 1
+    path: Assets/Scenes/A LA SEGURA/Dialogo 1.unity
+    guid: 87d4d1605b340b44ba55f1d7735b97f4
+  - enabled: 1
+    path: Assets/Scenes/A LA SEGURA/Dialogo 2.unity
+    guid: 2a274561913e2f54d9294f301ca8a553
+  - enabled: 1
+    path: Assets/Scenes/A LA SEGURA/Dialogo 3.unity
+    guid: f823c37fdea595549bb0e78f2e5b279d
+  - enabled: 1
+    path: Assets/Scenes/A LA SEGURA/z1.unity
+    guid: 16123da388eb9504c85bb6603158d51f
+  - enabled: 1
+    path: Assets/Scenes/A LA SEGURA/z zCreditos.unity
+    guid: fc7b08cb1ae948848bd91a12315f4ee1
   m_configObjects: {}

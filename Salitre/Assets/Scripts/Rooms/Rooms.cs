@@ -9,6 +9,7 @@ using UnityEngine.AI;
 
 public class Rooms : MonoBehaviour
 {
+    public bool alwaysActive;
     EmeraldAISystem[] enemys;
     DoorController[] doors;
 
@@ -75,10 +76,13 @@ public class Rooms : MonoBehaviour
     }
     public void DeactivateRoom()
     {
-        activeRoom = false;
-        for (int i = 0; i < allGo.Length; i++)
+        if (!alwaysActive)
         {
-            allGo[i].SetActive(false);
+            activeRoom = false;
+            for (int i = 0; i < allGo.Length; i++)
+            {
+                allGo[i].SetActive(false);
+            }
         }
     }
     public void ActivateDialog()
